@@ -18,8 +18,8 @@ author: Alys Murray
 permalink: "/books/love-spells-for-the-end-of-the-world/"
 ---
 ![post-thumb]({{site.baseurl}}/assets/images/portfolio/love_spells.jpg){:class="img-fluid rounded float-right ml-5 mb-4"}
-**LOVE SPELLS FOR THE END OF THE WORLD**
-Praise for Love Spells for The End of the World:
+**LOVE SPELLS FOR THE END OF THE WORLD**  
+Praise for Love Spells for The End of the World:  
 
  - [Smart Bitches, Trashy Books](https://smartbitchestrashybooks.com/2020/09/book-beat-halloween-romance-age-differences-more/)
  - [SyFy Fangrrls](https://www.syfy.com/syfywire/eight-sci-fi-and-fantasy-romances-to-check-out-in-september)
