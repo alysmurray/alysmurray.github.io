@@ -20,10 +20,15 @@ permalink: "/books/the-magnolia-sisters/"
 ![post-thumb]({{site.baseurl}}/assets/images/portfolio/magnolia_sisters.jpg){:class="img-fluid rounded float-right ml-5 mb-4"}
 
 **BOOK ONE IN THE HILLSBORO FLOWER FARM SERIES**
+***An Amazon #1 Romance Bestseller
+An Apple #1 Romance Bestseller
+An Amazon Top 25 Bestseller
+An Apple Top 10 Bestseller
+[Featured on Buzzfeed Books](https://www.buzzfeed.com/sarahrohoman/feel-good-summer-reads-amazon-canada)!***
 
-**Harper Anderson** has a to-do list longer than the Colorado river, and fields of tulips to tend to at her family’s flower farm in Hillsboro County, California. It’s her dream to run the business with her sisters when their father retires, keeping up traditions that began with her great-great-grandmother.
+**Harper Anderson** has a to-do list longer than the Colorado river, and fields of tulips to tend to at her family’s flower farm in Hillsboro County, California. It’s her dream to run the business with her sisters when their father retires, keeping up traditions that began with her great-great-grandmother.
 
-That is, if there’s a farm left to run. Rich out-of-towners looking for a slice of country living are hiking up the prices in town and it’s putting her family out of business. So she has no time for the arrogant LA tech mogul who makes her an offer to use their farm as his sister’s wedding venue. No amount of money could make up for the destruction it would wreak on next season’s crop. The sooner **Luke Martin** is on his way, the better.
+That is, if there’s a farm left to run. Rich out-of-towners looking for a slice of country living are hiking up the prices in town and it’s putting her family out of business. So she has no time for the arrogant LA tech mogul who makes her an offer to use their farm as his sister’s wedding venue. No amount of money could make up for the destruction it would wreak on next season’s crop. The sooner **Luke Martin** is on his way, the better.
 
 But Luke isn’t willing to go. He’s been looking out for his sister ever since their deadbeat parents left them to fend for themselves, and he’ll do whatever it takes to make her happy. So when Harper’s newest farmhand leaves her in the lurch, he sees an opportunity to strike a deal. He’ll work on the farm for free if she’ll give him the chance to change her mind.
 
