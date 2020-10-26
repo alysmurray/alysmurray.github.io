@@ -6,7 +6,7 @@ image: assets/images/about/author.jpg
 signature: assets/images/about/signature.png
 ---
 
-Hello, dear reader!
+Hello, Dear Reader!
 
 My name is Alys Murray and welcome to my website! Here, you’ll find everything there is to find about me: links to my social media pages, information about my books, and even some fun bonus content on my blog! If you’re looking to talk to my representation, please contact Maggie Cooper at Aevitas Creative for my literary work and Matt Felker at CAA in regards to film and television rights.
 
