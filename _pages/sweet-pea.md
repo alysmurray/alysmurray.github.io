@@ -11,7 +11,10 @@ permalink: "/books/sweet-pea-summer"
 ---
 ![post-thumb]({{site.baseurl}}/assets/images/portfolio/sweet_pea.jpg){:class="img-fluid rounded float-right ml-5 mb-4"}
 
+## Sweet Pea Summer
+
 **BOOK TWO IN THE HILLSBORO FLOWER FARM SERIES**
+***An Amazon Clean and Wholesome Romance Bestseller!***
 
 **Can you ever really forget your first love?**  
   
@@ -23,10 +26,10 @@ May is determined to protect her heart, but a lot has changed since high school.
   
 **A heartwarming story about first love, family and the importance of second chances. Fans of Jenny Hale, Debbie Macomber and Robyn Carr will adore  _Sweet Pea Summer_.**
 
-[Amazon](https://geni.us/B085DXVTQJCover)
+AMZ: [https://geni.us/B085DXVTQJCover](https://geni.us/B085DXVTQJCover)
 
-[Apple](https://buff.ly/334LA7W)
+Apple: [https://buff.ly/334LA7W](https://buff.ly/334LA7W)
 
-[Kobo](https://buff.ly/3cEAmvc)
+Kobo: [https://buff.ly/3cEAmvc](https://buff.ly/3cEAmvc)
 
-[Google](https://buff.ly/2VWAQHf)
+Google: [https://buff.ly/2VWAQHf](https://buff.ly/2VWAQHf)
