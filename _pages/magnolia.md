@@ -21,14 +21,10 @@ permalink: "/books/the-magnolia-sisters/"
 
 **BOOK ONE IN THE HILLSBORO FLOWER FARM SERIES**
 
-***An Amazon #1 Romance Bestseller
-
-An Apple #1 Romance Bestseller
-
-An Amazon Top 25 Bestseller
-
-An Apple Top 10 Bestseller
-
+***An Amazon #1 Romance Bestseller   
+An Apple #1 Romance Bestseller   
+An Amazon Top 25 Bestseller  
+An Apple Top 10 Bestseller    
 [Featured on Buzzfeed Books](https://www.buzzfeed.com/sarahrohoman/feel-good-summer-reads-amazon-canada)!***
 
 **Harper Anderson** has a to-do list longer than the Colorado river, and fields of tulips to tend to at her family’s flower farm in Hillsboro County, California. It’s her dream to run the business with her sisters when their father retires, keeping up traditions that began with her great-great-grandmother.
