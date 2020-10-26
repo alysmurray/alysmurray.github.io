@@ -20,7 +20,9 @@ permalink: "/books/wildflower-promises/"
 ![post-thumb]({{site.baseurl}}/assets/images/portfolio/wildflower-promises.jpg){:class="img-fluid rounded float-right ml-5 mb-4"}
 
 **The Perfect Hideaway**
+
 **Book Three in the Hillsboro Flower Farm Series**
+
 
 **Annie Martin** is thrilled to have moved from the hectic buzz of L.A. to the small town of Hillsboro, Northern California, where the most happening bar only plays honky-tonk and nowhere does a good matcha latte. But the best thing about Hillsboro? **The Anderson sisters**. At their noisy family dinners, Annie can almost forget the mistakes she made back in the city, trying to fit in.  
  
