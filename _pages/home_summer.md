@@ -1,3 +1,25 @@
+---
+layout: book
+title: Home at Summer's End
+date: 2020-02-12 11:12:31.000000000 +00:00
+type: page
+parent_id: '34'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _publicize_pending: '1'
+  _rest_api_published: '1'
+  _rest_api_client_id: "-1"
+  _thumbnail_id: '579'
+author: Alys Murray
+permalink: "/books/home-summer/"
+---
+![post-thumb]({{site.baseurl}}/assets/images/portfolio/home-summer.jpg){:class="img-fluid rounded float-right ml-5 mb-4"}
+
+
 **HOME AT SUMMER'S END**     
 **The Final Book in the Hillsboro Flower Farm Series**   
 

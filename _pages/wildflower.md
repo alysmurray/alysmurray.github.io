@@ -1,6 +1,6 @@
 ---
 layout: book
-title: Wildflower Promises
+title: The Perfect Hideaway
 date: 2020-06-25 11:12:31.000000000 +00:00
 type: page
 parent_id: '34'
@@ -15,9 +15,9 @@ meta:
   _rest_api_client_id: "-1"
   _thumbnail_id: '579'
 author: Alys Murray
-permalink: "/books/wildflower-promises/"
+permalink: "/books/perfect_hideaway/"
 ---
-![post-thumb]({{site.baseurl}}/assets/images/portfolio/wildflower-promises.jpg){:class="img-fluid rounded float-right ml-5 mb-4"}
+![post-thumb]({{site.baseurl}}/assets/images/portfolio/perfect_hideaway.jpg){:class="img-fluid rounded float-right ml-5 mb-4"}
 
 **The Perfect Hideaway**
 
@@ -32,7 +32,7 @@ Local reporter and all-around grouch **George Barnett** has been a thorn in Anni
  
 **But the more George and Annie try to control the love lives around them, the less they’re able to sway their own hearts.** As Annie’s infectious laugh begins to bring down George’s barrier of surliness, can he open his heart and let her in for real? And can Annie be brave enough to trust the man who could be her future, with the secrets of her past?  
  
-**A heart-warming story of friendship and finding love in the most unlikely of places, fans of Robyn Carr, Debbie Macomber and Carolyn Brown will adore  _Wildflower Promises_.**
+**A heart-warming story of friendship and finding love in the most unlikely of places, fans of Robyn Carr, Debbie Macomber and Carolyn Brown will adore.**
 
 **Amazon**: [https://bit.ly/3idiQjD](https://bit.ly/3idiQjD)
 
