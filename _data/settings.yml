@@ -61,11 +61,11 @@ blurb-btn-name: learn more
 
 portfolio-home-book-items:
 
-  - image : "assets/images/portfolio/home-summer.jpg"
-    url: "/books/home-summer/"
+  - image : "assets/images/portfolio/home_summer.jpg"
+    url: "/books/home_summer/"
 
-  - image : "assets/images/portfolio/perfect-hideaway.jpg"
-    url: "/books/perfect-hideaway/"
+  - image : "assets/images/portfolio/perfect_hideaway.jpg"
+    url: "/books/perfect_hideaway/"
 
   - image : "assets/images/portfolio/sweet_pea.jpg"
     url: "/books/sweet-pea-summer"
@@ -108,13 +108,13 @@ portfolio-label:
 
 portfolio-items:
 
-  - image : "assets/images/portfolio/home-summer.jpg"
-    url: "/books/home-summer/"
+  - image : "assets/images/portfolio/home_summer.jpg"
+    url: "/books/home_summer/"
     portfolio-type:
      - type: "novels"
 
-  - image : "assets/images/portfolio/perfect-hideaway.jpg"
-    url: "/books/perfect-hideaway/"
+  - image : "assets/images/portfolio/perfect_hideaway.jpg"
+    url: "/books/perfect_hideaway/"
     portfolio-type:
      - type: "novels"
 
