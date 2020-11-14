@@ -61,17 +61,20 @@ blurb-btn-name: learn more
 
 portfolio-home-book-items:
 
-  - image : "assets/images/portfolio/villain_lover.jpg"
-    url: "/books/villain-lover/"
+  - image : "assets/images/portfolio/home-summer.jpg"
+    url: "/books/home-summer/"
 
-  - image : "assets/images/portfolio/wildflower-promises.jpg"
-    url: "/books/wildflower-promises/"
+  - image : "assets/images/portfolio/perfect-hideaway.jpg"
+    url: "/books/perfect-hideaway/"
 
   - image : "assets/images/portfolio/sweet_pea.jpg"
     url: "/books/sweet-pea-summer"
 
   - image : "assets/images/portfolio/magnolia_sisters.jpg"
     url: "/books/the-magnolia-sisters"
+
+  - image : "assets/images/portfolio/villain_lover.jpg"
+    url: "/books/villain-lover/"
 
   - image : "assets/images/portfolio/christmas_company.jpg"
     url: "/books/the-christmas-company"
@@ -104,13 +107,14 @@ portfolio-label:
   }
 
 portfolio-items:
-  - image : "assets/images/portfolio/villain_lover.jpg"
-    url: "/books/villain-lover/"
+
+  - image : "assets/images/portfolio/home-summer.jpg"
+    url: "/books/home-summer/"
     portfolio-type:
      - type: "novels"
 
-  - image : "assets/images/portfolio/wildflower-promises.jpg"
-    url: "/books/wildflower-promises/"
+  - image : "assets/images/portfolio/perfect-hideaway.jpg"
+    url: "/books/perfect-hideaway/"
     portfolio-type:
      - type: "novels"
 
@@ -121,6 +125,11 @@ portfolio-items:
 
   - image : "assets/images/portfolio/magnolia_sisters.jpg"
     url: "/books/the-magnolia-sisters"
+    portfolio-type:
+     - type: "novels"
+
+  - image : "assets/images/portfolio/villain_lover.jpg"
+    url: "/books/villain-lover/"
     portfolio-type:
      - type: "novels"
 

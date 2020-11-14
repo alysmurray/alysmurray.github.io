@@ -15,9 +15,9 @@ meta:
   _rest_api_client_id: "-1"
   _thumbnail_id: '579'
 author: Alys Murray
-permalink: "/books/home-summer/"
+permalink: "/books/home_summer/"
 ---
-![post-thumb]({{site.baseurl}}/assets/images/portfolio/home-summer.jpg){:class="img-fluid rounded float-right ml-5 mb-4"}
+![post-thumb]({{site.baseurl}}/assets/images/portfolio/home_summer.jpg){:class="img-fluid rounded float-right ml-5 mb-4"}
 
 
 **HOME AT SUMMER'S END**     
