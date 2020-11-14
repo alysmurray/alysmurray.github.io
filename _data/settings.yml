@@ -33,7 +33,7 @@ disqus-identifier: alysmurray   # Add your shortname for Disqus Comment. For exa
 # Hero Section
 
 hero:
-  hero-title: Hi! I’m <br> Alys Murray <br> Romance Author
+  hero-title: Alys Murray
 
 social:
 - {icon: "ti-twitter", link: "https://twitter.com/writeralys"}
@@ -84,12 +84,7 @@ portfolio-home-book-items:
     
   - image : "assets/images/portfolio/tea_cowboy.jpg"
     url: "/books/tea-and-a-cowboy/"
-
-
     
----
-    
-
 
 portfolio-home-movie-items:
 
