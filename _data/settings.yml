@@ -61,6 +61,9 @@ blurb-btn-name: learn more
 
 portfolio-home-book-items:
 
+  - image : "assets/images/portfolio/small-town.jpg"
+    url: "/books/small-town/"
+    
   - image : "assets/images/portfolio/home_summer.jpg"
     url: "/books/home_summer/"
 
@@ -107,6 +110,11 @@ portfolio-label:
   }
 
 portfolio-items:
+
+  - image : "assets/images/portfolio/small-town.jpg"
+    url: "/books/small-town/"
+    portfolio-type:
+     - type: "novels"
 
   - image : "assets/images/portfolio/home_summer.jpg"
     url: "/books/home_summer/"
