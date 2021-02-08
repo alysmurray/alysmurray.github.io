@@ -19,7 +19,6 @@ permalink: "/books/small-town/"
 ---
 ![post-thumb]({{site.baseurl}}/assets/images/portfolio/small-town.jpg){:class="img-fluid rounded float-right ml-5 mb-4"}
 
-
 **Small Town Secrets**
 
 ***“Young women needed for the Fortune Springs Town Improvement Initiative. One year’s room and board provided.”***  
