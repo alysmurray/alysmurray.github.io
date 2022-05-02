@@ -3,29 +3,31 @@ layout: book
 title: Love Spells for the End of the World
 date: 2019-09-09 05:01:24.000000000 +01:00
 type: page
-parent_id: '34'
+parent_id: "34"
 published: true
-password: ''
+password: ""
 status: publish
 categories: []
 tags: []
 meta:
-  _publicize_pending: '1'
-  _rest_api_published: '1'
+  _publicize_pending: "1"
+  _rest_api_published: "1"
   _rest_api_client_id: "-1"
-  _thumbnail_id: '505'
+  _thumbnail_id: "505"
 author: Alys Murray
 permalink: "/books/love-spells-for-the-end-of-the-world/"
 ---
-![post-thumb]({{site.baseurl}}/assets/images/portfolio/love_spells.jpg){:class="img-fluid rounded float-right ml-5 mb-4"}
-**LOVE SPELLS FOR THE END OF THE WORLD**  
-Praise for Love Spells for The End of the World:  
 
- - [Smart Bitches, Trashy Books](https://smartbitchestrashybooks.com/2020/09/book-beat-halloween-romance-age-differences-more/)
- - [SyFy Fangrrls](https://www.syfy.com/syfywire/eight-sci-fi-and-fantasy-romances-to-check-out-in-september)
- - [Corey's Book Corner (One of their Favorite Halloween Romances!)](https://coreysbookcorner.wordpress.com/2019/09/14/review-of-love-spells-for-the-end-of-the-world/)
- - [Y'all, This Book](https://yallthisbook.co/book-review-love-spells-for-the-end-of-the-world/)
- - [Plucked from the Stacks](https://pluckedfromthestacks.wordpress.com/2019/09/17/love-spells-for-the-end-of-the-world-by-alys-murray/)
+<img src="{{site.baseurl}}/assets/images/portfolio/love_spells.jpg" alt="drawing" class="img-fluid rounded float-right ml-5 mb-4" style="width:40%;"/>
+
+**LOVE SPELLS FOR THE END OF THE WORLD**  
+Praise for Love Spells for The End of the World:
+
+- [Smart Bitches, Trashy Books](https://smartbitchestrashybooks.com/2020/09/book-beat-halloween-romance-age-differences-more/)
+- [SyFy Fangrrls](https://www.syfy.com/syfywire/eight-sci-fi-and-fantasy-romances-to-check-out-in-september)
+- [Corey's Book Corner (One of their Favorite Halloween Romances!)](https://coreysbookcorner.wordpress.com/2019/09/14/review-of-love-spells-for-the-end-of-the-world/)
+- [Y'all, This Book](https://yallthisbook.co/book-review-love-spells-for-the-end-of-the-world/)
+- [Plucked from the Stacks](https://pluckedfromthestacks.wordpress.com/2019/09/17/love-spells-for-the-end-of-the-world-by-alys-murray/)
 
 _Perfect for fans of Hocus Pocus, Halloweentown, and Good Omens, this Halloween romance is certain to put you under its spell...._
 

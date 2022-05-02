@@ -3,21 +3,22 @@ layout: book
 title: Society Girl
 date: 2019-04-24 10:14:49.000000000 +01:00
 type: page
-parent_id: '34'
+parent_id: "34"
 published: true
-password: ''
+password: ""
 status: publish
 categories: []
 tags: []
 meta:
-  _publicize_pending: '1'
-  _rest_api_published: '1'
+  _publicize_pending: "1"
+  _rest_api_published: "1"
   _rest_api_client_id: "-1"
-  _thumbnail_id: '489'
+  _thumbnail_id: "489"
 author: Alys Murray
 permalink: "/books/society-girl/"
 ---
-![post-thumb]({{site.baseurl}}/assets/images/portfolio/society_girl.jpg){:class="img-fluid rounded float-right ml-5 mb-4"}
+
+<img src="{{site.baseurl}}/assets/images/portfolio/society_girl.jpg" alt="drawing" class="img-fluid rounded float-right ml-5 mb-4" style="width:40%;"/>
 
 Sam Dubarry is a cynic. Growing up in the foster system in NYC does that to you. And falling in love is by far the stupidest thing you could do in her opinion.
 
@@ -33,8 +34,8 @@ The Society will let her in, if she destroys the one person she might be falling
 
 [Amazon](https://www.amazon.com/Society-Girl-Alys-Murray-ebook/dp/B07V41F46H)
 
-
 <button title="Click to Show/Hide Content" type="button" onclick="if(document.getElementById('spoiler') .style.display=='none') {document.getElementById('spoiler') .style.display=''}else{document.getElementById('spoiler') .style.display='none'}">Content Warnings</button>
+
 <div id="spoiler" style="display:none">
   Scenes of Binge Drinking, Brief mention of parent death, Absent/Distant Father/Familial Trauma, Brief scenes of male violence.
 </div>

@@ -3,29 +3,30 @@ layout: book
 title: The Magnolia Sisters
 date: 2020-02-12 11:12:31.000000000 +00:00
 type: page
-parent_id: '34'
+parent_id: "34"
 published: true
-password: ''
+password: ""
 status: publish
 categories: []
 tags: []
 meta:
-  _publicize_pending: '1'
-  _rest_api_published: '1'
+  _publicize_pending: "1"
+  _rest_api_published: "1"
   _rest_api_client_id: "-1"
-  _thumbnail_id: '579'
+  _thumbnail_id: "579"
 author: Alys Murray
 permalink: "/books/the-magnolia-sisters/"
 ---
-![post-thumb]({{site.baseurl}}/assets/images/portfolio/magnolia_sisters.jpg){:class="img-fluid rounded float-right ml-5 mb-4"}
+
+<img src="{{site.baseurl}}/assets/images/portfolio/magnolia_sisters.jpg" alt="drawing" class="img-fluid rounded float-right ml-5 mb-4" style="width:40%;"/>
 
 **BOOK ONE IN THE HILLSBORO FLOWER FARM SERIES**
 
-***An Amazon #1 Romance Bestseller   
-An Apple #1 Romance Bestseller   
+**_An Amazon #1 Romance Bestseller  
+An Apple #1 Romance Bestseller  
 An Amazon Top 25 Bestseller  
-An Apple Top 10 Bestseller    
-[Featured on Buzzfeed Books](https://www.buzzfeed.com/sarahrohoman/feel-good-summer-reads-amazon-canada)!***
+An Apple Top 10 Bestseller  
+[Featured on Buzzfeed Books](https://www.buzzfeed.com/sarahrohoman/feel-good-summer-reads-amazon-canada)!_**
 
 **Harper Anderson** has a to-do list longer than the Colorado river, and fields of tulips to tend to at her family’s flower farm in Hillsboro County, California. It’s her dream to run the business with her sisters when their father retires, keeping up traditions that began with her great-great-grandmother.
 

@@ -1,16 +1,15 @@
+---
 #-------------------------------
 # General Site Settings
 
-title: Alys Murray - Romance with Heart 
+title: Alys Murray - Romance with Heart
 logo: logo.png
 
-
 menu:
-- {name: About, link: '/about'}
-- {name: Blog, link: '/blog'}
-- {name: Books and Movies, link: '/portfolio'}
-- {name: Contact, link: '/contact'}
-
+  - { name: About, link: "/about" }
+  - { name: Blog, link: "/blog" }
+  - { name: Books and Movies, link: "/portfolio" }
+  - { name: Contact, link: "/contact" }
 
 #-------------------------------
 # Google Analytics Section
@@ -22,12 +21,10 @@ menu:
 
 google-analytics: UA-165424514-1
 
-
 #-------------------------------
 # Comment Section (Disqus)
 
-disqus-identifier: alysmurray   # Add your shortname for Disqus Comment. For example mr-brown
-
+disqus-identifier: alysmurray # Add your shortname for Disqus Comment. For example mr-brown
 
 #-------------------------------
 # Hero Section
@@ -36,23 +33,22 @@ hero:
   hero-title: Alys Murray
 
 social:
-- {icon: "ti-twitter", link: "https://twitter.com/writeralys"}
-- {icon: "ti-facebook", link: "https://www.facebook.com/alysmurrayauthor/"}
-- {icon: "ti-instagram", link: "https://www.instagram.com/writeralys/"}
-- {icon: "ti-youtube", link: "https://www.youtube.com/channel/UCEFlLCbgJJJSkyCoKrci_FA"}
-
+  - { icon: "ti-twitter", link: "https://twitter.com/writeralys" }
+  - { icon: "ti-facebook", link: "https://www.facebook.com/alysmurrayauthor/" }
+  - { icon: "ti-instagram", link: "https://www.instagram.com/writeralys/" }
+  - {
+      icon: "ti-youtube",
+      link: "https://www.youtube.com/channel/UCEFlLCbgJJJSkyCoKrci_FA",
+    }
 
 #-------------------------------
 # About (Section and Page)
 
 # About Section
-blurb:
-  Alys Murray is a screenwriter and author from New Orleans, Louisiana. With an original Christmas film on Lifetime and books published by Hallmark, Bookouture, and Entangled, she’s written something for the romantic in all of us!
+blurb: Alys Murray is a screenwriter and author from New Orleans, Louisiana. With an original Christmas film on Lifetime and books published by Hallmark, Bookouture, and Entangled, she’s written something for the romantic in all of us!
 
-blurb-btn-link: '/about'
+blurb-btn-link: "/about"
 blurb-btn-name: learn more
-
-
 
 #-------------------------------
 # Portfolio (Section and Page)
@@ -60,113 +56,122 @@ blurb-btn-name: learn more
 # Portfolio Home Section
 
 portfolio-home-book-items:
+  - image: "assets/images/portfolio/almost_queen.jpeg"
+    url: "/books/almost-queen/"
 
-  - image : "assets/images/portfolio/small-town.jpg"
+  - image: "assets/images/portfolio/small-town.jpg"
     url: "/books/small-town/"
-    
-  - image : "assets/images/portfolio/home_summer.jpg"
+
+  - image: "assets/images/portfolio/home_summer.jpg"
     url: "/books/home_summer/"
 
-  - image : "assets/images/portfolio/perfect_hideaway.jpg"
+  - image: "assets/images/portfolio/perfect_hideaway.jpg"
     url: "/books/perfect_hideaway/"
 
-  - image : "assets/images/portfolio/sweet_pea.jpg"
+  - image: "assets/images/portfolio/sweet_pea.jpg"
     url: "/books/sweet-pea-summer"
 
-  - image : "assets/images/portfolio/magnolia_sisters.jpg"
+  - image: "assets/images/portfolio/magnolia_sisters.jpg"
     url: "/books/the-magnolia-sisters"
 
-  - image : "assets/images/portfolio/villain_lover.jpg"
+  - image: "assets/images/portfolio/villain_lover.jpg"
     url: "/books/villain-lover/"
 
-  - image : "assets/images/portfolio/christmas_company.jpg"
+  - image: "assets/images/portfolio/christmas_company.jpg"
     url: "/books/the-christmas-company"
 
-  - image : "assets/images/portfolio/society_girl.jpg"
+  - image: "assets/images/portfolio/society_girl.jpg"
     url: "/books/society-girl/"
 
-  - image : "assets/images/portfolio/love_spells.jpg"
+  - image: "assets/images/portfolio/love_spells.jpg"
     url: "/books/love-spells-for-the-end-of-the-world/"
-    
-  - image : "assets/images/portfolio/tea_cowboy.jpg"
+
+  - image: "assets/images/portfolio/tea_cowboy.jpg"
     url: "/books/tea-and-a-cowboy/"
-    
 
 portfolio-home-movie-items:
-
-  - image : "assets/images/portfolio/christmas_louisiana.jpg"
+  - image: "assets/images/portfolio/new_orleans_noel.jpeg"
+    url: "/movies/new-orleans-noel"
+  - image: "assets/images/portfolio/every_time.jpeg"
+    url: "/movies/every-time-a-bell-rings"
+  - image: "assets/images/portfolio/christmas_louisiana.jpg"
     url: "/movies/christmas-in-louisiana"
-
-
 # Portfolio Page
 portfolio-label:
-- {
-    title : "Novels",
-    type : "novels"
-  }
-- {
-    title : "Movies",
-    type : "movies"
-  }
+  - { title: "Novels", type: "novels" }
+  - { title: "Movies", type: "movies" }
 
 portfolio-items:
+  - image: "assets/images/portfolio/almost_queen.jpeg"
+    url: "/books/almost-queen/"
+    portfolio-type:
+      - type: "novels"
 
-  - image : "assets/images/portfolio/small-town.jpg"
+  - image: "assets/images/portfolio/small-town.jpg"
     url: "/books/small-town/"
     portfolio-type:
-     - type: "novels"
+      - type: "novels"
 
-  - image : "assets/images/portfolio/home_summer.jpg"
+  - image: "assets/images/portfolio/home_summer.jpg"
     url: "/books/home_summer/"
     portfolio-type:
-     - type: "novels"
+      - type: "novels"
 
-  - image : "assets/images/portfolio/perfect_hideaway.jpg"
+  - image: "assets/images/portfolio/perfect_hideaway.jpg"
     url: "/books/perfect_hideaway/"
     portfolio-type:
-     - type: "novels"
+      - type: "novels"
 
-  - image : "assets/images/portfolio/sweet_pea.jpg"
+  - image: "assets/images/portfolio/sweet_pea.jpg"
     url: "/books/sweet-pea-summer"
     portfolio-type:
-     - type: "novels"
+      - type: "novels"
 
-  - image : "assets/images/portfolio/magnolia_sisters.jpg"
+  - image: "assets/images/portfolio/magnolia_sisters.jpg"
     url: "/books/the-magnolia-sisters"
     portfolio-type:
-     - type: "novels"
+      - type: "novels"
 
-  - image : "assets/images/portfolio/villain_lover.jpg"
+  - image: "assets/images/portfolio/villain_lover.jpg"
     url: "/books/villain-lover/"
     portfolio-type:
-     - type: "novels"
+      - type: "novels"
 
-  - image : "assets/images/portfolio/christmas_company.jpg"
+  - image: "assets/images/portfolio/christmas_company.jpg"
     url: "/books/the-christmas-company"
     portfolio-type:
-     - type: "novels"
+      - type: "novels"
 
-  - image : "assets/images/portfolio/society_girl.jpg"
+  - image: "assets/images/portfolio/society_girl.jpg"
     url: "/books/society-girl/"
     portfolio-type:
-     - type: "novels"
+      - type: "novels"
 
-  - image : "assets/images/portfolio/love_spells.jpg"
+  - image: "assets/images/portfolio/love_spells.jpg"
     url: "/books/love-spells-for-the-end-of-the-world/"
     portfolio-type:
-     - type: "novels"
-    
-  - image : "assets/images/portfolio/tea_cowboy.jpg"
+      - type: "novels"
+
+  - image: "assets/images/portfolio/tea_cowboy.jpg"
     url: "/books/tea-and-a-cowboy/"
     portfolio-type:
-     - type: "novels"
-     
+      - type: "novels"
 
-  - image : "assets/images/portfolio/christmas_louisiana.jpg"
+  - image: "assets/images/portfolio/christmas_louisiana.jpg"
     url: "/movies/christmas-in-louisiana"
     portfolio-type:
-     - type: "movies"
-     
+      - type: "movies"
+
+  - image: "assets/images/portfolio/every_time.jpeg"
+    url: "/movies/every-time-a-bell-rings"
+    portfolio-type:
+      - type: "movies"
+
+  - image: "assets/images/portfolio/christmas_louisiana.jpg"
+    url: "/movies/christmas-in-louisiana"
+    portfolio-type:
+      - type: "movies"
+
 #-------------------------------
 # Contact Section
 
