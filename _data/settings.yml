@@ -7,7 +7,7 @@ logo: logo.png
 
 menu:
   - { name: About, link: "/about" }
-  - { name: Blog, link: "/blog" }
+  # - { name: Blog, link: "/blog" }
   - { name: Books and Movies, link: "/portfolio" }
   - { name: Contact, link: "/contact" }
 
@@ -36,16 +36,16 @@ social:
   - { icon: "ti-twitter", link: "https://twitter.com/writeralys" }
   - { icon: "ti-facebook", link: "https://www.facebook.com/alysmurrayauthor/" }
   - { icon: "ti-instagram", link: "https://www.instagram.com/writeralys/" }
-  - {
-      icon: "ti-youtube",
-      link: "https://www.youtube.com/channel/UCEFlLCbgJJJSkyCoKrci_FA",
-    }
+  # - {
+  #     icon: "ti-youtube",
+  #     link: "https://www.youtube.com/channel/UCEFlLCbgJJJSkyCoKrci_FA",
+  #   }
 
 #-------------------------------
 # About (Section and Page)
 
 # About Section
-blurb: Alys Murray is a screenwriter and author from New Orleans, Louisiana. With an original Christmas film on Lifetime and books published by Hallmark, Bookouture, and Entangled, she’s written something for the romantic in all of us!
+blurb: Alys Murray is a screenwriter and novelist who writes crowd-pleasing genre fare for the romantic in all of us. Represented by Matt Felker and Norris Brooks at CAA for film and television and Maggie Cooper at Aevitas Creative Management for books, she is a three-time international bestseller with produced screenplays on Hallmark and Lifetime.
 
 blurb-btn-link: "/about"
 blurb-btn-name: learn more
@@ -96,6 +96,8 @@ portfolio-home-movie-items:
     url: "/movies/every-time-a-bell-rings"
   - image: "assets/images/portfolio/christmas_louisiana.jpg"
     url: "/movies/christmas-in-louisiana"
+  - image: "assets/images/portfolio/coming_soon.png"
+    url: "/movies/family-christmas"
 # Portfolio Page
 portfolio-label:
   - { title: "Novels", type: "novels" }
@@ -167,8 +169,13 @@ portfolio-items:
     portfolio-type:
       - type: "movies"
 
-  - image: "assets/images/portfolio/christmas_louisiana.jpg"
-    url: "/movies/christmas-in-louisiana"
+  - image: "assets/images/portfolio/new_orleans_noel.jpeg"
+    url: "/movies/new-orleans-noel"
+    portfolio-type:
+      - type: "movies"
+
+  - image: "assets/images/portfolio/coming_soon.png"
+    url: "/movies/family-christmas"
     portfolio-type:
       - type: "movies"
 
