@@ -1,0 +1,31 @@
+---
+interface Props {
+  label?: string;
+  title: string;
+  description?: string;
+  align?: 'left' | 'center';
+}
+
+const { label, title, description, align = 'center' } = Astro.props;
+
+const alignClasses = {
+  left: 'text-left',
+  center: 'text-center mx-auto',
+};
+---
+
+<header class:list={["max-w-2xl", alignClasses[align]]}>
+  {label && (
+    <span class="inline-block text-xs font-medium uppercase tracking-[0.2em] text-burgundy mb-4">
+      {label}
+    </span>
+  )}
+
+  <h2 class="font-serif">{title}</h2>
+
+  {description && (
+    <p class="mt-4 text-charcoal-light text-lg">
+      {description}
+    </p>
+  )}
+</header>

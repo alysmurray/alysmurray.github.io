@@ -1,0 +1,151 @@
+---
+import Layout from '../layouts/Layout.astro';
+import HeroCard from '../components/HeroCard.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+
+import alysFilmmaker from '../assets/images/alys-filmmaker.jpg';
+import alysAuthor from '../assets/images/alys-author.png';
+---
+
+<Layout title="Alys Murray | Screenwriter & Novelist">
+  <!-- Hero Section -->
+  <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <!-- Background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-br from-cream via-cream-dark to-rose-light/30"></div>
+
+    <!-- Decorative elements -->
+    <div class="absolute top-20 left-10 w-64 h-64 bg-rose/10 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 bg-burgundy/5 rounded-full blur-3xl"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6 py-20 text-center">
+      <div class="fade-in-up">
+        <p class="text-rose-dark uppercase tracking-[0.3em] text-sm font-medium mb-6">
+          Screenwriter & Novelist
+        </p>
+      </div>
+
+      <h1 class="fade-in-up stagger-1 font-serif text-charcoal mb-8">
+        <span class="block">Alys Murray</span>
+      </h1>
+
+      <div class="fade-in-up stagger-2 max-w-2xl mx-auto mb-12">
+        <p class="text-xl md:text-2xl text-charcoal-light font-serif italic leading-relaxed">
+          A writer-director of crowd-pleasing genre fare for the romantic in all of us.
+        </p>
+      </div>
+
+      <div class="fade-in-up stagger-3 flex flex-wrap justify-center gap-4">
+        <a
+          href="/screenwriting"
+          class="w-52 text-center py-3 border-2 border-teal text-teal rounded-full font-medium hover:bg-teal hover:text-cream transition-colors"
+        >
+          View Filmography
+        </a>
+        <a
+          href="/novels"
+          class="w-52 text-center py-3 border-2 border-burgundy text-burgundy rounded-full font-medium hover:bg-burgundy hover:text-cream transition-colors"
+        >
+          Explore Books
+        </a>
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#featured" class="fade-in stagger-4 absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer hover:text-charcoal transition-colors">
+        <svg class="w-6 h-6 text-charcoal-light animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Featured Work Section -->
+  <section id="featured" class="py-24 bg-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <SectionHeader
+        label="Featured"
+        title="Stories That Move You"
+        description="From the screen to the page, exploring love in all its forms."
+      />
+
+      <div class="grid md:grid-cols-2 gap-8 mt-16">
+        <HeroCard
+          href="/screenwriting"
+          title="Filmmaker"
+          subtitle="Screenwriter & Director"
+          description="150+ million views across linear television, streaming, and short-form video. From Hallmark to Netflix, crafting stories that audiences love."
+          accent="teal"
+          highlights={["Netflix Visionary Fellow", "CAA Represented", "4+ Produced Films"]}
+          image={alysFilmmaker}
+        />
+
+        <HeroCard
+          href="/novels"
+          title="Author"
+          subtitle="Romance Novelist"
+          description="Three-time international bestselling author. Stories of love, hope, and happily-ever-afters that have captured hearts around the world."
+          accent="rose"
+          highlights={["3x Bestseller", "11 Published Novels", "Apple & Amazon Charts"]}
+          image={alysAuthor}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News Section -->
+  <section class="py-24 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-6">
+      <SectionHeader
+        label="2025"
+        title="What's New"
+        description="The latest projects and exciting announcements."
+      />
+
+      <div class="grid md:grid-cols-3 gap-8 mt-16">
+        <article class="bg-cream rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-xs font-medium uppercase tracking-wider text-teal-dark">Fellowship</span>
+          <h3 class="font-serif text-xl mt-3 mb-4">Netflix Visionary Fellow</h3>
+          <p class="text-charcoal-light text-sm leading-relaxed">
+            Named a 2024-2025 Netflix x Inevitable Foundation Visionary Fellow, developing new projects with industry-leading support.
+          </p>
+        </article>
+
+        <article class="bg-cream rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-xs font-medium uppercase tracking-wider text-teal-dark">Film</span>
+          <h3 class="font-serif text-xl mt-3 mb-4">The Velvet Rose</h3>
+          <p class="text-charcoal-light text-sm leading-relaxed">
+            Premiered on MyDrama with 20+ million views in the first 24 hours, proving the global appetite for romantic storytelling.
+          </p>
+        </article>
+
+        <article class="bg-cream rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow">
+          <span class="text-xs font-medium uppercase tracking-wider text-teal-dark">Upcoming</span>
+          <h3 class="font-serif text-xl mt-3 mb-4">2026 Releases</h3>
+          <p class="text-charcoal-light text-sm leading-relaxed">
+            "My Midsummer Marriage" coming to Hallmark in 2026.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quote Section -->
+  <section class="py-24 bg-burgundy text-cream">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <svg class="w-12 h-12 mx-auto mb-8 text-cream/50" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+      </svg>
+      <blockquote class="font-serif text-2xl md:text-3xl italic leading-relaxed mb-8 text-cream">
+        Getting to write professionally is a dream come true, and when you read my books or watch my films, I hope they make you as happy as writing them has made me.
+      </blockquote>
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-cream text-burgundy rounded-full hover:bg-cream-dark transition-colors font-medium"
+      >
+        Get in touch
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+</Layout>

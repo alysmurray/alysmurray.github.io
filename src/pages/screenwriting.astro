@@ -1,0 +1,240 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+
+const upcomingProjects = [
+  { title: "My Midsummer Marriage", network: "Hallmark", year: "2026" },
+];
+
+const recentProjects = [
+  { title: "The Velvet Rose", network: "MyDrama", year: "2025", note: "20M+ views in 24 hours" },
+  { title: "The Black Dagger Brotherhood", network: "Passionflix", year: "2025", note: "Seasons 1-2 Co-writer" },
+];
+
+const producedProjects = [
+  { title: "My Southern Family Christmas", network: "Hallmark", year: "2022", note: "2.9M live viewers" },
+  { title: "New Orleans Noel", network: "Lifetime", year: "2022", note: "Audience Choice Award" },
+  { title: "Every Time a Bell Rings", network: "Hallmark", year: "2021" },
+  { title: "Christmas in Louisiana", network: "Lifetime", year: "2019" },
+  { title: "The Twelve Toys of Christmas", network: "", year: "" },
+];
+
+const fellowships = [
+  { name: "Netflix/Inevitable Foundation Visionary Fellowship", year: "2024-2025", highlight: true },
+  { name: "Sony Homegrown Development Lab", year: "Current" },
+  { name: "Orchard Project Episodic Lab", year: "2023" },
+  { name: "Inevitable Foundation Elevate Grant", year: "2023" },
+  { name: "RespectAbility Lab Fellow", year: "2022" },
+];
+
+const awards = [
+  { title: "Audience Choice Award", event: "New Orleans International Film Festival", project: "New Orleans Noel", year: "2022" },
+  { title: "Romantic Comedy Award", event: "WriteMovies", project: "Study Date", year: "2021" },
+];
+---
+
+<Layout title="Screenwriting | Alys Murray" description="Explore Alys Murray's screenwriting portfolio including Hallmark, Lifetime, and Netflix projects.">
+  <!-- Hero -->
+  <section class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-cream-dark to-cream"></div>
+    <div class="absolute top-0 right-0 w-1/2 h-full bg-teal/5 -skew-x-12 transform origin-top-right"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl">
+        <span class="text-charcoal-light uppercase tracking-[0.2em] text-sm font-medium">Screenwriter & Director</span>
+        <h1 class="mt-4 mb-6">Filmmaker</h1>
+        <p class="text-xl text-charcoal-light leading-relaxed">
+          Alys writes genre fare for the romantic in all of us. She began her career in screenwriting with Lifetime's 2019 hit <em>Christmas in Louisiana</em>, and continues to write for Hallmark, Lifetime, ViacomCBS, the U.K. and Australian markets, Passionflix, and others. Across linear television, streaming, and short-form video apps such as MyDrama, her film and television writing has been viewed over <strong class="text-charcoal">150 million times</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Netflix Fellowship Highlight -->
+  <section class="py-16 bg-charcoal text-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <div class="flex-shrink-0">
+          <div class="w-20 h-20 rounded-2xl bg-[#E50914] flex items-center justify-center">
+            <svg class="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M5.398 0v.006c3.028 8.556 5.37 15.175 8.348 23.596 2.344.058 4.85.398 4.854.398-2.8-7.924-5.923-16.747-8.487-24zm8.489 0v9.63L18.6 22.951c-.043-7.86-.004-15.913.002-22.95zM5.398 1.05V24c1.873-.225 2.81-.312 4.715-.398v-9.22z"/>
+            </svg>
+          </div>
+        </div>
+        <div class="flex-1 text-center md:text-left">
+          <span class="text-cream/70 text-sm uppercase tracking-wider">2024-2025</span>
+          <h2 class="font-serif text-2xl md:text-3xl mt-2 text-cream">Netflix x Inevitable Foundation Visionary Fellow</h2>
+          <p class="text-cream/80 mt-3 max-w-2xl leading-relaxed">
+            Selected for this prestigious fellowship, developing new projects including "Beware C*ckblocking Ghosts" - a horror rom-com proof of concept starring Tony-nominee Julia Lester.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filmography -->
+  <section class="py-24 bg-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <SectionHeader
+        label="Filmography"
+        title="Projects"
+        align="left"
+      />
+
+      <!-- Upcoming -->
+      <div class="mt-12">
+        <h3 class="text-lg font-medium text-charcoal mb-6 flex items-center gap-3">
+          <span class="w-2 h-2 rounded-full bg-teal animate-pulse"></span>
+          Upcoming
+        </h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          {upcomingProjects.map((project) => (
+            <div class="bg-cream-dark rounded-xl p-6 border border-teal/30">
+              <div class="flex justify-between items-start">
+                <div>
+                  <h4 class="font-serif text-xl">{project.title}</h4>
+                  <p class="text-charcoal-light text-sm mt-1">{project.network}</p>
+                </div>
+                <span class="text-charcoal-light font-medium">{project.year}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Recent -->
+      <div class="mt-12">
+        <h3 class="text-lg font-medium text-charcoal-light mb-6">Recent Releases</h3>
+        <div class="grid md:grid-cols-2 gap-4">
+          {recentProjects.map((project) => (
+            <div class="bg-white rounded-xl p-6 shadow-sm">
+              <div class="flex justify-between items-start mb-2">
+                <h4 class="font-serif text-xl">{project.title}</h4>
+                <span class="text-charcoal-light text-sm">{project.year}</span>
+              </div>
+              <p class="text-charcoal-light text-sm">{project.network}</p>
+              {project.note && (
+                <span class="inline-block mt-3 px-3 py-1 bg-rose/10 text-rose-dark text-xs rounded-full">
+                  {project.note}
+                </span>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Produced -->
+      <div class="mt-12">
+        <h3 class="text-lg font-medium text-charcoal-light mb-6">Produced Works</h3>
+        <div class="space-y-3">
+          {producedProjects.map((project) => (
+            <div class="flex items-center justify-between py-4 border-b border-cream-dark">
+              <div class="flex items-center gap-4">
+                <span class="font-serif text-lg">{project.title}</span>
+                {project.note && (
+                  <span class="hidden md:inline-block px-2 py-0.5 bg-teal/20 text-charcoal text-xs rounded">
+                    {project.note}
+                  </span>
+                )}
+              </div>
+              <div class="flex items-center gap-4 text-sm text-charcoal-light">
+                <span>{project.network}</span>
+                <span>{project.year}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Awards & Fellowships -->
+  <section class="py-24 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16">
+        <!-- Fellowships -->
+        <div>
+          <h3 class="font-serif text-2xl mb-8">Fellowships & Programs</h3>
+          <div class="space-y-4">
+            {fellowships.map((fellowship) => (
+              <div class:list={[
+                "p-4 rounded-lg",
+                fellowship.highlight ? "bg-teal text-cream" : "bg-cream"
+              ]}>
+                <div class="flex justify-between items-start">
+                  <span class:list={[
+                    "font-medium",
+                    fellowship.highlight ? "text-cream" : "text-charcoal"
+                  ]}>
+                    {fellowship.name}
+                  </span>
+                  <span class:list={[
+                    "text-sm",
+                    fellowship.highlight ? "text-rose-light" : "text-charcoal-light"
+                  ]}>
+                    {fellowship.year}
+                  </span>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Awards -->
+        <div>
+          <h3 class="font-serif text-2xl mb-8">Awards</h3>
+          <div class="space-y-6">
+            {awards.map((award) => (
+              <div class="bg-cream p-6 rounded-lg">
+                <span class="text-teal text-sm font-medium">{award.year}</span>
+                <h4 class="font-serif text-xl mt-2">{award.title}</h4>
+                <p class="text-charcoal-light text-sm mt-1">{award.event}</p>
+                <p class="text-sm mt-2">
+                  <span class="text-charcoal-light">For:</span> <em>{award.project}</em>
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Representation -->
+  <section class="py-24 bg-cream">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+      <SectionHeader
+        label="Representation"
+        title="Working Together"
+        description="For film and television inquiries, please contact my representatives."
+      />
+
+      <div class="mt-12 inline-flex flex-col md:flex-row gap-8 md:gap-16">
+        <div>
+          <p class="font-serif text-xl">CAA</p>
+          <p class="text-charcoal-light mt-1">Matt Felker & Norris Brooks</p>
+        </div>
+        <div class="hidden md:block w-px bg-rose-light"></div>
+        <div>
+          <p class="font-serif text-xl">Aevitas Creative Management</p>
+          <p class="text-charcoal-light mt-1">Maggie Cooper</p>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <p class="text-charcoal-light mb-4">
+          Spec screenplays available for option including YA television pilots, romantic comedy features, and historical drama features.
+        </p>
+        <a
+          href="mailto:hello@alysmurray.com"
+          class="inline-flex items-center gap-2 text-teal hover:text-teal-dark font-medium"
+        >
+          hello@alysmurray.com
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>

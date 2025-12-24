@@ -1,0 +1,187 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import BookCard from '../components/BookCard.astro';
+
+const books = [
+  {
+    title: "A Little Buzzed",
+    slug: "a-little-buzzed",
+    status: "Pre-order Now",
+    featured: true,
+    cover: "/images/a-little-buzzed.jpg",
+  },
+  {
+    title: "The Almost Queen",
+    slug: "the-almost-queen",
+    genre: "Historical Romance",
+    cover: "/images/almost_queen.jpeg",
+  },
+  {
+    title: "Small Town Secrets",
+    slug: "small-town-secrets",
+    genre: "Contemporary Romance",
+    cover: "/images/small-town.jpg",
+  },
+  {
+    title: "Home at Summer's End",
+    slug: "home-at-summers-end",
+    genre: "Contemporary Romance",
+    cover: "/images/home_summer.jpg",
+  },
+  {
+    title: "The Perfect Hideaway",
+    slug: "the-perfect-hideaway",
+    genre: "Contemporary Romance",
+    bestseller: true,
+    cover: "/images/perfect_hideaway.jpg",
+  },
+  {
+    title: "Sweet Pea Summer",
+    slug: "sweet-pea-summer",
+    genre: "Contemporary Romance",
+    bestseller: true,
+    cover: "/images/sweet_pea.jpg",
+  },
+  {
+    title: "The Magnolia Sisters",
+    slug: "the-magnolia-sisters",
+    genre: "Contemporary Romance",
+    bestseller: true,
+    cover: "/images/magnolia_sisters.jpg",
+  },
+  {
+    title: "Love Spells for the End of the World",
+    slug: "love-spells",
+    genre: "Paranormal Romance",
+    cover: "/images/love_spells.jpg",
+  },
+  {
+    title: "Society Girl",
+    slug: "society-girl",
+    genre: "Contemporary Romance",
+    cover: "/images/society_girl.jpg",
+  },
+  {
+    title: "Tea and a Cowboy",
+    slug: "tea-and-a-cowboy",
+    genre: "Contemporary Romance",
+    cover: "/images/tea_cowboy.jpg",
+  },
+  {
+    title: "The Christmas Company",
+    slug: "the-christmas-company",
+    genre: "Holiday Romance",
+    cover: "/images/christmas_company.jpg",
+  },
+];
+---
+
+<Layout title="Novels | Alys Murray" description="Explore the romance novels of three-time international bestselling author Alys Murray.">
+  <!-- Hero -->
+  <section class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-b from-cream-dark to-cream"></div>
+    <div class="absolute bottom-0 left-0 w-full h-1/2 bg-rose/5"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl">
+        <span class="text-rose-dark uppercase tracking-[0.2em] text-sm font-medium">Romance Novelist</span>
+        <h1 class="mt-4 mb-6">Author</h1>
+        <p class="text-xl text-charcoal-light leading-relaxed">
+          Three-time international bestselling author. Stories of love, hope, and happily-ever-afters that have captured hearts around the world.
+        </p>
+
+        <div class="flex flex-wrap gap-3 mt-8">
+          <span class="px-4 py-2 bg-rose/20 text-rose-dark rounded-full text-sm font-medium">
+            3x International Bestseller
+          </span>
+          <span class="px-4 py-2 bg-cream-dark text-charcoal-light rounded-full text-sm">
+            Apple Books Charts
+          </span>
+          <span class="px-4 py-2 bg-cream-dark text-charcoal-light rounded-full text-sm">
+            Amazon Bestseller
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured / Pre-order -->
+  <section class="py-16 bg-burgundy text-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+        <div class="w-56 md:w-64 h-84 md:h-96 rounded-lg overflow-hidden shadow-xl flex-shrink-0">
+          <img
+            src="/images/a-little-buzzed.jpg"
+            alt="A Little Buzzed book cover"
+            class="w-full h-full object-cover"
+          />
+        </div>
+        <div class="text-center md:text-left">
+          <span class="text-cream/80 text-sm uppercase tracking-wider">Coming Soon</span>
+          <h2 class="font-serif text-3xl md:text-4xl mt-2 text-cream">A Little Buzzed</h2>
+          <p class="text-cream/90 mt-4 max-w-xl leading-relaxed">
+            The newest steamy romantic comedy from Alys Murray. Pre-order now to be among the first to read this fun and spicy story.
+          </p>
+          <a
+            href="/a-little-buzzed"
+            class="inline-block mt-6 px-8 py-3 bg-cream text-burgundy rounded-full font-medium hover:bg-cream-dark transition-colors"
+          >
+            Pre-order Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- All Books -->
+  <section class="py-24 bg-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <SectionHeader
+        label="Library"
+        title="All Books"
+      />
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 mt-16">
+        {books.filter(b => !b.featured).map((book) => (
+          <BookCard
+            title={book.title}
+            genre={book.genre}
+            bestseller={book.bestseller}
+            coverImage={book.cover}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="py-24 bg-cream-dark">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <SectionHeader
+        label="Stay Updated"
+        title="Join the Mailing List"
+        description="Be the first to know about new releases, exclusive content, and special offers."
+      />
+
+      <form class="mt-12 flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+        <input
+          type="email"
+          placeholder="Enter your email"
+          class="flex-1 px-6 py-3 rounded-full border border-rose-light bg-cream focus:outline-none focus:border-burgundy transition-colors"
+          required
+        />
+        <button
+          type="submit"
+          class="px-8 py-3 bg-burgundy text-cream rounded-full font-medium hover:bg-burgundy-dark transition-colors"
+        >
+          Subscribe
+        </button>
+      </form>
+
+      <p class="text-charcoal-light text-sm mt-4">
+        No spam, ever. Unsubscribe anytime.
+      </p>
+    </div>
+  </section>
+</Layout>

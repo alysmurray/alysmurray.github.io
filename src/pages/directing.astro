@@ -1,0 +1,165 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+
+const cast = [
+  { name: "Julia Lester", role: "Lead" },
+  { name: "Ruby Jay", role: "Lead" },
+  { name: "Reed Horstmann", role: "Supporting" },
+];
+
+const crew = [
+  { name: "Grant Bell", role: "Director of Photography" },
+  { name: "CJ Palmisano", role: "1st AD" },
+  { name: "Morgan Gannes", role: "Costume Design" },
+  { name: "Hayley Orozco", role: "Hair/Makeup/SFX" },
+  { name: "Danielle Pretsfelder", role: "Casting" },
+  { name: "Saga Darnell", role: "BTS Photography" },
+];
+
+const btsImages = [
+  "/images/directing/bts-01.jpg",
+  "/images/directing/bts-02.jpg",
+  "/images/directing/bts-03.jpg",
+  "/images/directing/bts-04.jpg",
+  "/images/directing/bts-05.jpg",
+  "/images/directing/bts-06.jpg",
+  "/images/directing/bts-07.jpg",
+];
+---
+
+<Layout title="Directing | Alys Murray" description="Alys Murray's directorial work, including the horror-comedy short film Beware C*ckblocking Ghosts.">
+  <!-- Hero -->
+  <section class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-charcoal via-charcoal to-teal/30"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <span class="text-cream/70 uppercase tracking-[0.2em] text-sm font-medium">Directorial Debut</span>
+          <h1 class="mt-4 mb-6 text-cream">Beware C*ckblocking Ghosts</h1>
+          <p class="text-cream/90 text-lg leading-relaxed mb-6">
+            A 2025 horror-romance-comedy short film, created in collaboration with Netflix and the Inevitable Foundation Visionary Fellowship.
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
+              Horror-Comedy
+            </span>
+            <span class="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
+              Romance
+            </span>
+            <span class="px-4 py-2 bg-teal text-cream rounded-full text-sm font-medium">
+              Netflix x Inevitable Foundation
+            </span>
+          </div>
+        </div>
+
+        <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+          <img
+            src="/images/directing/bts-hero.jpg"
+            alt="Alys Murray directing on set"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Synopsis -->
+  <section class="py-24 bg-cream">
+    <div class="max-w-4xl mx-auto px-6">
+      <SectionHeader
+        label="Synopsis"
+        title="The Story"
+      />
+
+      <div class="mt-12 max-w-2xl mx-auto">
+        <blockquote class="font-serif text-2xl md:text-3xl italic text-charcoal leading-relaxed text-center">
+          "A teenage girl must escape with her life when the demonic ghost of her dead best friend gets murderously jealous of her homecoming plans."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cast -->
+  <section class="py-24 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-6">
+      <SectionHeader
+        label="Talent"
+        title="Cast"
+      />
+
+      <div class="grid md:grid-cols-3 gap-8 mt-16 max-w-3xl mx-auto">
+        {cast.map((member) => (
+          <div class="text-center p-6 bg-cream rounded-2xl">
+            <h3 class="font-serif text-xl">{member.name}</h3>
+            <p class="text-charcoal-light text-sm mt-1">{member.role}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- BTS Gallery -->
+  <section class="py-24 bg-charcoal">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <span class="text-teal-light uppercase tracking-[0.2em] text-sm font-medium">On Set</span>
+        <h2 class="font-serif text-3xl mt-4 text-cream">Behind the Scenes</h2>
+        <p class="text-cream/70 mt-2">Photos by Saga Darnell</p>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {btsImages.map((image, index) => (
+          <div class="aspect-square rounded-xl overflow-hidden group">
+            <img
+              src={image}
+              alt={`Behind the scenes photo ${index + 1}`}
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Crew -->
+  <section class="py-24 bg-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <SectionHeader
+        label="Team"
+        title="Key Crew"
+      />
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16 max-w-4xl mx-auto">
+        {crew.map((member) => (
+          <div class="flex items-center gap-4 p-4 bg-cream-dark rounded-xl">
+            <div class="w-12 h-12 rounded-full bg-teal/10 flex items-center justify-center flex-shrink-0">
+              <svg class="w-6 h-6 text-teal" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="font-medium text-charcoal">{member.name}</h3>
+              <p class="text-charcoal-light text-sm">{member.role}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Fellowship CTA -->
+  <section class="py-16 bg-teal text-cream">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <span class="text-cream/80 text-sm uppercase tracking-wider">Netflix x Inevitable Foundation</span>
+      <h2 class="font-serif text-2xl mt-4 text-cream">Visionary Fellowship</h2>
+      <p class="text-cream/90 mt-4 max-w-xl mx-auto leading-relaxed">
+        This film was developed as part of the 2024-2025 Netflix x Inevitable Foundation Visionary Fellowship,
+        supporting disabled filmmakers in creating bold, original stories.
+      </p>
+    </div>
+  </section>
+</Layout>

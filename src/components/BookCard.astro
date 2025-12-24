@@ -1,0 +1,50 @@
+---
+interface Props {
+  title: string;
+  genre?: string;
+  bestseller?: boolean;
+  coverImage?: string;
+}
+
+const { title, genre, bestseller = false, coverImage } = Astro.props;
+---
+
+<div class="group">
+  <!-- Book Cover -->
+  <div class="relative aspect-[2/3] rounded-lg overflow-hidden bg-gradient-to-br from-rose-light/50 to-cream-dark mb-4 shadow-md group-hover:shadow-xl transition-shadow">
+    {coverImage ? (
+      <img
+        src={coverImage}
+        alt={title}
+        class="w-full h-full object-cover"
+        loading="lazy"
+        decoding="async"
+      />
+    ) : (
+      <div class="absolute inset-0 flex items-center justify-center p-4">
+        <span class="font-serif text-center text-charcoal-light text-sm leading-tight">
+          {title}
+        </span>
+      </div>
+    )}
+
+    {bestseller && (
+      <div class="absolute top-2 right-2">
+        <span class="px-2 py-1 bg-burgundy text-cream text-xs font-medium rounded">
+          Bestseller
+        </span>
+      </div>
+    )}
+
+    <!-- Hover overlay -->
+    <div class="absolute inset-0 bg-burgundy/0 group-hover:bg-burgundy/10 transition-colors"></div>
+  </div>
+
+  <!-- Book Info -->
+  <h3 class="font-serif text-lg leading-tight group-hover:text-burgundy transition-colors">
+    {title}
+  </h3>
+  {genre && (
+    <p class="text-charcoal-light text-sm mt-1">{genre}</p>
+  )}
+</div>

@@ -1,0 +1,156 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import alysAuthor from '../assets/images/alys-author.png';
+
+const education = [
+  {
+    degree: "MFA in Film Studies",
+    institution: "Kings College London",
+  },
+  {
+    degree: "BFA with Playwriting Fellowship",
+    institution: "NYU Tisch School of the Arts",
+    note: "Studied at NYU London, RADA, and Jermyn Street Theatre",
+  },
+];
+
+const accomplishments = [
+  "3 international bestselling novels",
+  "4+ produced screenplays",
+  "150+ million views across platforms",
+  "Netflix/Inevitable Foundation Visionary Fellow",
+  "Sony Homegrown Development Lab member",
+  "RespectAbility Fellow",
+];
+
+---
+
+<Layout title="About | Alys Murray" description="Learn more about Alys Murray - screenwriter, novelist, and storyteller from New Orleans.">
+  <!-- Hero -->
+  <section class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-cream via-cream-dark to-rose-light/20"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
+        <!-- Photo -->
+        <div class="order-2 md:order-1">
+          <div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-xl">
+            <Image
+              src={alysAuthor}
+              alt="Alys Murray"
+              class="w-full h-full object-cover object-top"
+              widths={[400, 600, 800]}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <div class="order-1 md:order-2">
+          <span class="text-burgundy uppercase tracking-[0.2em] text-sm font-medium">About</span>
+          <h1 class="mt-4 mb-6">Hello, Dear Reader!</h1>
+          <p class="text-xl text-charcoal-light font-serif italic mb-6">
+            I write crowd-pleasing genre fare for the romantic in all of us.
+          </p>
+          <div class="space-y-4 text-charcoal-light leading-relaxed">
+            <p>
+              My name is <strong class="text-charcoal">Alys Murray</strong> and welcome to my website! Here, you'll find everything there is to find about me: links to my social media pages, information about my books and films, and even a contact form if you would like to get in touch!
+            </p>
+            <p>
+              Born and raised in <strong class="text-charcoal">New Orleans, Louisiana</strong>, I received my BFA from NYU's Tisch School of the Arts, where I completed a playwriting Fellowship with NYU London, The Royal Academy of Dramatic Arts (RADA), the Jermyn Street Theatre, and the Writers Guild of Great Britain. Subsequently, I received my MFA in Film Studies from Kings College London.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="py-24 bg-cream">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="space-y-6 text-charcoal-light leading-relaxed text-lg">
+        <p>
+          I am format agnostic - I will write film, television, books, podcasts, anything! - but thematically devout. <strong class="text-charcoal">I love telling stories about love!</strong> As a disabled screenwriter and RespectAbility Fellow, I feel it is both my honor and duty to tell stories that bring joy and hope to audiences everywhere.
+        </p>
+        <p>
+          I love swing dancing, romance novels, Brendan Fraser, and screwball comedies of the 1930's and 1940's. Tobey Maguire is my Spider-Man. Michael Bay has two films in the Criterion Collection. I'm an avid cook and baker, and have company over for big meals and parties any chance I get. If you've got a great recipe, please send it my way! I also travel extensively, and have visited nearly 30 countries - any travel tips? I'd love to hear those, too.
+        </p>
+        <p>
+          As a kid, I was a voracious reader, devouring everything from The Princess Diaries to Great Expectations. Over the years, I started writing my own stories, plays, and fanfiction and developed a love for storytelling. Getting to write professionally is a dream come true, and when you read my books or watch my films, I hope they make you as happy as writing them has made me.
+        </p>
+        <p>
+          If you ever have any questions, want to chat about my books or just say hello, you can reach me on any of my social media pages or with the <a href="/contact" class="text-burgundy hover:text-burgundy-dark underline">contact form</a>. I love connecting with readers and hope to hear from you soon!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education & Accomplishments -->
+  <section class="py-24 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-2 gap-16">
+        <!-- Education -->
+        <div>
+          <h2 class="font-serif text-2xl mb-8">Education</h2>
+          <div class="space-y-6">
+            {education.map((edu) => (
+              <div class="border-l-2 border-burgundy pl-6">
+                <h3 class="font-serif text-xl">{edu.degree}</h3>
+                <p class="text-charcoal-light">{edu.institution}</p>
+                {edu.note && (
+                  <p class="text-sm text-charcoal-light mt-2">{edu.note}</p>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <!-- Accomplishments -->
+        <div>
+          <h2 class="font-serif text-2xl mb-8">Accomplishments</h2>
+          <ul class="space-y-4">
+            {accomplishments.map((item) => (
+              <li class="flex items-start gap-3">
+                <svg class="w-5 h-5 text-burgundy flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-charcoal">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Representation -->
+  <section class="py-16 bg-burgundy text-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <h2 class="font-serif text-2xl text-cream">Representation</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+        <div class="text-center p-6 rounded-xl bg-cream/10">
+          <p class="text-cream/80 text-sm uppercase tracking-wider mb-2">Film & Television</p>
+          <p class="font-serif text-xl text-cream">CAA</p>
+          <p class="text-cream/90 mt-1">Matt Felker & Norris Brooks</p>
+        </div>
+        <div class="text-center p-6 rounded-xl bg-cream/10">
+          <p class="text-cream/80 text-sm uppercase tracking-wider mb-2">Literary</p>
+          <p class="font-serif text-xl text-cream">Aevitas Creative Management</p>
+          <p class="text-cream/90 mt-1">Maggie Cooper</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sign-off -->
+  <section class="py-16 bg-cream-dark">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <p class="font-serif text-2xl italic text-charcoal">Peace and Love,</p>
+      <p class="font-serif text-3xl mt-2 text-burgundy">Alys</p>
+    </div>
+  </section>
+</Layout>

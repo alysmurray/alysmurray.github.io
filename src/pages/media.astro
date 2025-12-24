@@ -1,0 +1,273 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+
+const mediaFeatures = [
+  // 2025
+  {
+    outlet: "Harper's Bazaar",
+    title: "Romance Authors on Heated Rivalry",
+    image: "/images/media/harpers-bazaar.png",
+    url: "https://www.harpersbazaar.com/culture/art-books-music/a69709771/heated-rivalry-romance-authors-impact/#:~:text=I%20can't%20claim",
+    description: "12 Authors on What Heated Rivalry's Success Means for the Romance Community.",
+    year: "2025",
+  },
+  // 2024
+  {
+    outlet: "Deadline",
+    title: "Inevitable Foundation Visionary Fellowship",
+    image: "/images/media/deadline-visionary.webp",
+    url: "https://deadline.com/2024/11/inevitable-foundation-visionary-fellowship-sets-inaugural-cohort-1236174434/",
+    description: "Named to the inaugural cohort of the Netflix x Inevitable Foundation Visionary Fellowship.",
+    year: "2024",
+  },
+  // 2023
+  {
+    outlet: "Broadway World",
+    title: "Orchard Project 2023",
+    image: "/images/media/broadway-world.png",
+    url: "https://www.broadwayworld.com/article/The-Orchard-Project-Reveals-Artists-and-Companies-For-2023-Lab-Programs-20230526",
+    description: "Coverage of participation in The Orchard Project's 2023 Lab Programs.",
+    year: "2023",
+  },
+  // 2022
+  {
+    outlet: "The Advocate",
+    title: "Louisiana Hallmark Movie",
+    image: "/images/media/the-advocate.png",
+    url: "https://www.theadvocate.com/acadiana/entertainment_life/louisiana-shot-holiday-movie-debuts-on-hallmark-on-thursday/article_9c5c13e4-6b69-11ed-952d-3722493a9e55.html",
+    description: "Featured in The Advocate's coverage of Hallmark productions in Louisiana.",
+    year: "2022",
+  },
+  {
+    outlet: "Hollywood Reporter",
+    title: "RespectAbility Virtual Entertainment Lab",
+    image: "/images/media/hollywood-reporter.png",
+    url: "https://www.hollywoodreporter.com/business/business-news/respectability-virtual-lab-fellows-2022-1235199018/",
+    description: "Highlighted in THR's coverage of the RespectAbility Fellowship program.",
+    year: "2022",
+  },
+  {
+    outlet: "Jimmy Kimmel Live",
+    title: "Lifetime Christmas Movies Monologue",
+    image: "/images/media/jimmy-kimmel.png",
+    url: "https://x.com/writeralys/status/1604143562995761153",
+    description: "Featured in Jimmy Kimmel's monologue about Lifetime Christmas movies.",
+    year: "2022",
+  },
+  // 2019
+  {
+    outlet: "Nerdist",
+    title: "Horror & The Final Girl",
+    image: "/images/media/nerdist.png",
+    url: "https://nerdist.com/article/horror-movies-final-girl-like-romance-novels-scream-sidney-prescott/",
+    description: "How SCREAM Betrays the Hope of the Final Girl - exploring horror through a romance lens.",
+    year: "2019",
+  },
+  {
+    outlet: "Star Trek",
+    title: "Captain Janeway Analysis",
+    image: "/images/media/star-trek.png",
+    url: "https://www.startrek.com/news/janeway-fair-haven-and-the-romantic-making-of-a-heroine",
+    description: "Janeway, Fair Haven and the Romantic Making of a Heroine.",
+    year: "2019",
+  },
+  {
+    outlet: "Hallmark Channel",
+    title: "Home & Family Appearance",
+    image: "/images/media/deadline.jpg",
+    description: "Television appearance on Hallmark's Home & Family show.",
+    year: "2019",
+  },
+];
+---
+
+<Layout title="Media | Alys Murray" description="Press coverage, interviews, and media appearances by Alys Murray.">
+  <!-- Hero -->
+  <section class="relative py-24 md:py-32 overflow-hidden">
+    <div class="absolute inset-0 bg-gradient-to-br from-cream via-cream-dark to-rose-light/20"></div>
+
+    <div class="relative max-w-6xl mx-auto px-6">
+      <div class="max-w-2xl">
+        <span class="text-burgundy uppercase tracking-[0.2em] text-sm font-medium">Press & Features</span>
+        <h1 class="mt-4 mb-6">Media</h1>
+        <p class="text-xl text-charcoal-light leading-relaxed">
+          Featured in publications from Deadline to Harper's Bazaar, covering everything from romance writing to the future of disability representation in Hollywood.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Media Grid -->
+  <section class="py-24 bg-cream">
+    <div class="max-w-6xl mx-auto px-6">
+      <SectionHeader
+        label="Features"
+        title="Press & Appearances"
+        description="Selected media coverage and interviews."
+      />
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+        {mediaFeatures.map((feature) => (
+          feature.url ? (
+            <a
+              href={feature.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group bg-cream-dark rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all hover:-translate-y-1 block"
+            >
+              {feature.image ? (
+                <div class="aspect-video overflow-hidden">
+                  <img
+                    src={feature.image}
+                    alt={`${feature.outlet} - ${feature.title}`}
+                    class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              ) : (
+                <div class="aspect-video bg-gradient-to-br from-burgundy/10 to-rose-light/20 flex items-center justify-center">
+                  <span class="font-serif text-2xl text-burgundy/60">{feature.outlet}</span>
+                </div>
+              )}
+              <div class="p-6">
+                <span class="text-xs font-medium uppercase tracking-wider text-burgundy">
+                  {feature.outlet}
+                </span>
+                <h3 class="font-serif text-lg mt-2 mb-2 group-hover:text-burgundy transition-colors">
+                  {feature.title}
+                </h3>
+                <p class="text-charcoal-light text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+                <span class="inline-flex items-center gap-1 text-burgundy text-sm mt-3 font-medium">
+                  Read article
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          ) : (
+            <article class="group bg-cream-dark rounded-2xl overflow-hidden shadow-sm">
+              {feature.image ? (
+                <div class="aspect-video overflow-hidden">
+                  <img
+                    src={feature.image}
+                    alt={`${feature.outlet} - ${feature.title}`}
+                    class="w-full h-full object-cover object-center"
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </div>
+              ) : (
+                <div class="aspect-video bg-gradient-to-br from-burgundy/10 to-rose-light/20 flex items-center justify-center">
+                  <span class="font-serif text-2xl text-burgundy/60">{feature.outlet}</span>
+                </div>
+              )}
+              <div class="p-6">
+                <span class="text-xs font-medium uppercase tracking-wider text-burgundy">
+                  {feature.outlet}
+                </span>
+                <h3 class="font-serif text-lg mt-2 mb-2">
+                  {feature.title}
+                </h3>
+                <p class="text-charcoal-light text-sm leading-relaxed">
+                  {feature.description}
+                </p>
+              </div>
+            </article>
+          )
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Videos -->
+  <section class="py-24 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-6">
+      <SectionHeader
+        label="Watch"
+        title="Videos"
+        description="TV appearances, interviews, and behind-the-scenes clips."
+      />
+
+      <div class="flex flex-wrap justify-center gap-8 mt-16">
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-lg w-full md:w-[calc(50%-1rem)]">
+          <iframe
+            src="https://www.youtube.com/embed/LffOWIdOLKE"
+            title="My Southern Family Christmas - Sneak Peek"
+            class="w-full h-full"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-lg w-full md:w-[calc(50%-1rem)]">
+          <iframe
+            src="https://www.youtube.com/embed/oJvcGhWpEuE"
+            title="Alys Murray's Sweet Potato Biscuits with Country Ham"
+            class="w-full h-full"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-lg w-full md:w-[calc(50%-1rem)]">
+          <iframe
+            src="https://www.youtube.com/embed/oNhfLO5UhxE"
+            title="An Icon's Special Treat - Lifetime"
+            class="w-full h-full"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-lg w-full md:w-[calc(50%-1rem)]">
+          <iframe
+            src="https://www.youtube.com/embed/za3U3d47O0s"
+            title="Media Appearance"
+            class="w-full h-full"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-lg w-full md:w-[calc(50%-1rem)]">
+          <iframe
+            src="https://www.youtube.com/embed/Fk9EQrZCt2Q"
+            title="Every Time a Bell Rings - Preview"
+            class="w-full h-full"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Press Contact -->
+  <section class="py-16 bg-burgundy text-cream">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="font-serif text-2xl text-cream mb-4">Press Inquiries</h2>
+      <p class="text-cream/90 mb-8">
+        For interview requests, speaking engagements, or press inquiries, please reach out through representation.
+      </p>
+      <a
+        href="/contact"
+        class="inline-flex items-center gap-2 px-6 py-3 bg-cream text-burgundy rounded-full hover:bg-cream-dark transition-colors font-medium"
+      >
+        Get in touch
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+        </svg>
+      </a>
+    </div>
+  </section>
+</Layout>
