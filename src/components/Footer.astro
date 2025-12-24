@@ -1,4 +1,5 @@
 ---
+const base = import.meta.env.BASE_URL;
 const socialLinks = [
   {
     href: 'https://instagram.com/writeralys',
@@ -30,12 +31,12 @@ const currentYear = new Date().getFullYear();
       <div>
         <h4 class="font-serif text-lg text-cream mb-4">Explore</h4>
         <ul class="space-y-2">
-          <li><a href="/screenwriting" class="text-sm text-rose-light hover:text-cream transition-colors">Screenwriting</a></li>
-          <li><a href="/directing" class="text-sm text-rose-light hover:text-cream transition-colors">Directing</a></li>
-          <li><a href="/novels" class="text-sm text-rose-light hover:text-cream transition-colors">Novels</a></li>
-          <li><a href="/media" class="text-sm text-rose-light hover:text-cream transition-colors">Media</a></li>
-          <li><a href="/about" class="text-sm text-rose-light hover:text-cream transition-colors">About</a></li>
-          <li><a href="/contact" class="text-sm text-rose-light hover:text-cream transition-colors">Contact</a></li>
+          <li><a href={`${base}screenwriting`} class="text-sm text-rose-light hover:text-cream transition-colors">Screenwriting</a></li>
+          <li><a href={`${base}directing`} class="text-sm text-rose-light hover:text-cream transition-colors">Directing</a></li>
+          <li><a href={`${base}novels`} class="text-sm text-rose-light hover:text-cream transition-colors">Novels</a></li>
+          <li><a href={`${base}media`} class="text-sm text-rose-light hover:text-cream transition-colors">Media</a></li>
+          <li><a href={`${base}about`} class="text-sm text-rose-light hover:text-cream transition-colors">About</a></li>
+          <li><a href={`${base}contact`} class="text-sm text-rose-light hover:text-cream transition-colors">Contact</a></li>
         </ul>
       </div>
 

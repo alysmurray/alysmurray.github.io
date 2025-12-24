@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 
+const base = import.meta.env.BASE_URL;
+
 const cast = [
   { name: "Julia Lester", role: "Lead" },
   { name: "Ruby Jay", role: "Lead" },
@@ -18,13 +20,13 @@ const crew = [
 ];
 
 const btsImages = [
-  "/images/directing/bts-01.jpg",
-  "/images/directing/bts-02.jpg",
-  "/images/directing/bts-03.jpg",
-  "/images/directing/bts-04.jpg",
-  "/images/directing/bts-05.jpg",
-  "/images/directing/bts-06.jpg",
-  "/images/directing/bts-07.jpg",
+  `${base}images/directing/bts-01.jpg`,
+  `${base}images/directing/bts-02.jpg`,
+  `${base}images/directing/bts-03.jpg`,
+  `${base}images/directing/bts-04.jpg`,
+  `${base}images/directing/bts-05.jpg`,
+  `${base}images/directing/bts-06.jpg`,
+  `${base}images/directing/bts-07.jpg`,
 ];
 ---
 
@@ -56,7 +58,7 @@ const btsImages = [
 
         <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
           <img
-            src="/images/directing/bts-hero.jpg"
+            src={`${base}images/directing/bts-hero.jpg`}
             alt="Alys Murray directing on set"
             class="w-full h-full object-cover"
           />

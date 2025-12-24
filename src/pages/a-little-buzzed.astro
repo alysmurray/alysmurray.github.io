@@ -1,5 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="A Little Buzzed Pre-Order | Alys Murray" description="Pre-order A Little Buzzed by Alys Murray. Get signed, personalized copies with exclusive sticker packs from Garden District Books.">
@@ -18,7 +20,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="relative">
             <div class="absolute -inset-4 bg-white/20 rounded-3xl blur-xl"></div>
             <img
-              src="/images/a-little-buzzed.jpg"
+              src={`${base}images/a-little-buzzed.jpg`}
               alt="A Little Buzzed book cover"
               class="relative w-72 md:w-80 rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
             />

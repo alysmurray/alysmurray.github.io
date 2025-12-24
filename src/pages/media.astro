@@ -2,12 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 
+const base = import.meta.env.BASE_URL;
+
 const mediaFeatures = [
   // 2025
   {
     outlet: "Harper's Bazaar",
     title: "Romance Authors on Heated Rivalry",
-    image: "/images/media/harpers-bazaar.png",
+    image: `${base}images/media/harpers-bazaar.png`,
     url: "https://www.harpersbazaar.com/culture/art-books-music/a69709771/heated-rivalry-romance-authors-impact/#:~:text=I%20can't%20claim",
     description: "12 Authors on What Heated Rivalry's Success Means for the Romance Community.",
     year: "2025",
@@ -16,7 +18,7 @@ const mediaFeatures = [
   {
     outlet: "Deadline",
     title: "Inevitable Foundation Visionary Fellowship",
-    image: "/images/media/deadline-visionary.webp",
+    image: `${base}images/media/deadline-visionary.webp`,
     url: "https://deadline.com/2024/11/inevitable-foundation-visionary-fellowship-sets-inaugural-cohort-1236174434/",
     description: "Named to the inaugural cohort of the Netflix x Inevitable Foundation Visionary Fellowship.",
     year: "2024",
@@ -25,7 +27,7 @@ const mediaFeatures = [
   {
     outlet: "Broadway World",
     title: "Orchard Project 2023",
-    image: "/images/media/broadway-world.png",
+    image: `${base}images/media/broadway-world.png`,
     url: "https://www.broadwayworld.com/article/The-Orchard-Project-Reveals-Artists-and-Companies-For-2023-Lab-Programs-20230526",
     description: "Coverage of participation in The Orchard Project's 2023 Lab Programs.",
     year: "2023",
@@ -34,7 +36,7 @@ const mediaFeatures = [
   {
     outlet: "The Advocate",
     title: "Louisiana Hallmark Movie",
-    image: "/images/media/the-advocate.png",
+    image: `${base}images/media/the-advocate.png`,
     url: "https://www.theadvocate.com/acadiana/entertainment_life/louisiana-shot-holiday-movie-debuts-on-hallmark-on-thursday/article_9c5c13e4-6b69-11ed-952d-3722493a9e55.html",
     description: "Featured in The Advocate's coverage of Hallmark productions in Louisiana.",
     year: "2022",
@@ -42,7 +44,7 @@ const mediaFeatures = [
   {
     outlet: "Hollywood Reporter",
     title: "RespectAbility Virtual Entertainment Lab",
-    image: "/images/media/hollywood-reporter.png",
+    image: `${base}images/media/hollywood-reporter.png`,
     url: "https://www.hollywoodreporter.com/business/business-news/respectability-virtual-lab-fellows-2022-1235199018/",
     description: "Highlighted in THR's coverage of the RespectAbility Fellowship program.",
     year: "2022",
@@ -50,7 +52,7 @@ const mediaFeatures = [
   {
     outlet: "Jimmy Kimmel Live",
     title: "Lifetime Christmas Movies Monologue",
-    image: "/images/media/jimmy-kimmel.png",
+    image: `${base}images/media/jimmy-kimmel.png`,
     url: "https://x.com/writeralys/status/1604143562995761153",
     description: "Featured in Jimmy Kimmel's monologue about Lifetime Christmas movies.",
     year: "2022",
@@ -59,7 +61,7 @@ const mediaFeatures = [
   {
     outlet: "Nerdist",
     title: "Horror & The Final Girl",
-    image: "/images/media/nerdist.png",
+    image: `${base}images/media/nerdist.png`,
     url: "https://nerdist.com/article/horror-movies-final-girl-like-romance-novels-scream-sidney-prescott/",
     description: "How SCREAM Betrays the Hope of the Final Girl - exploring horror through a romance lens.",
     year: "2019",
@@ -67,7 +69,7 @@ const mediaFeatures = [
   {
     outlet: "Star Trek",
     title: "Captain Janeway Analysis",
-    image: "/images/media/star-trek.png",
+    image: `${base}images/media/star-trek.png`,
     url: "https://www.startrek.com/news/janeway-fair-haven-and-the-romantic-making-of-a-heroine",
     description: "Janeway, Fair Haven and the Romantic Making of a Heroine.",
     year: "2019",
@@ -75,7 +77,7 @@ const mediaFeatures = [
   {
     outlet: "Hallmark Channel",
     title: "Home & Family Appearance",
-    image: "/images/media/deadline.jpg",
+    image: `${base}images/media/deadline.jpg`,
     description: "Television appearance on Hallmark's Home & Family show.",
     year: "2019",
   },
@@ -260,7 +262,7 @@ const mediaFeatures = [
         For interview requests, speaking engagements, or press inquiries, please reach out through representation.
       </p>
       <a
-        href="/contact"
+        href={`${base}contact`}
         class="inline-flex items-center gap-2 px-6 py-3 bg-cream text-burgundy rounded-full hover:bg-cream-dark transition-colors font-medium"
       >
         Get in touch

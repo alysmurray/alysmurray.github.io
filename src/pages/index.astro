@@ -5,6 +5,8 @@ import SectionHeader from '../components/SectionHeader.astro';
 
 import alysFilmmaker from '../assets/images/alys-filmmaker.jpg';
 import alysAuthor from '../assets/images/alys-author.png';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Alys Murray | Screenwriter & Novelist">
@@ -36,13 +38,13 @@ import alysAuthor from '../assets/images/alys-author.png';
 
       <div class="fade-in-up stagger-3 flex flex-wrap justify-center gap-4">
         <a
-          href="/screenwriting"
+          href={`${base}screenwriting`}
           class="w-52 text-center py-3 border-2 border-teal text-teal rounded-full font-medium hover:bg-teal hover:text-cream transition-colors"
         >
           View Filmography
         </a>
         <a
-          href="/novels"
+          href={`${base}novels`}
           class="w-52 text-center py-3 border-2 border-burgundy text-burgundy rounded-full font-medium hover:bg-burgundy hover:text-cream transition-colors"
         >
           Explore Books
@@ -69,7 +71,7 @@ import alysAuthor from '../assets/images/alys-author.png';
 
       <div class="grid md:grid-cols-2 gap-8 mt-16">
         <HeroCard
-          href="/screenwriting"
+          href={`${base}screenwriting`}
           title="Filmmaker"
           subtitle="Screenwriter & Director"
           description="150+ million views across linear television, streaming, and short-form video. From Hallmark to Netflix, crafting stories that audiences love."
@@ -79,7 +81,7 @@ import alysAuthor from '../assets/images/alys-author.png';
         />
 
         <HeroCard
-          href="/novels"
+          href={`${base}novels`}
           title="Author"
           subtitle="Romance Novelist"
           description="Three-time international bestselling author. Stories of love, hope, and happily-ever-afters that have captured hearts around the world."
@@ -138,7 +140,7 @@ import alysAuthor from '../assets/images/alys-author.png';
         Getting to write professionally is a dream come true, and when you read my books or watch my films, I hope they make you as happy as writing them has made me.
       </blockquote>
       <a
-        href="/contact"
+        href={`${base}contact`}
         class="inline-flex items-center gap-2 px-6 py-3 bg-cream text-burgundy rounded-full hover:bg-cream-dark transition-colors font-medium"
       >
         Get in touch

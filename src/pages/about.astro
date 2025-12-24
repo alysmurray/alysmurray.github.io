@@ -3,6 +3,8 @@ import Layout from '../layouts/Layout.astro';
 import { Image } from 'astro:assets';
 import alysAuthor from '../assets/images/alys-author.png';
 
+const base = import.meta.env.BASE_URL;
+
 const education = [
   {
     degree: "MFA in Film Studies",
@@ -80,7 +82,7 @@ const accomplishments = [
           As a kid, I was a voracious reader, devouring everything from The Princess Diaries to Great Expectations. Over the years, I started writing my own stories, plays, and fanfiction and developed a love for storytelling. Getting to write professionally is a dream come true, and when you read my books or watch my films, I hope they make you as happy as writing them has made me.
         </p>
         <p>
-          If you ever have any questions, want to chat about my books or just say hello, you can reach me on any of my social media pages or with the <a href="/contact" class="text-burgundy hover:text-burgundy-dark underline">contact form</a>. I love connecting with readers and hope to hear from you soon!
+          If you ever have any questions, want to chat about my books or just say hello, you can reach me on any of my social media pages or with the <a href={`${base}contact`} class="text-burgundy hover:text-burgundy-dark underline">contact form</a>. I love connecting with readers and hope to hear from you soon!
         </p>
       </div>
     </div>
