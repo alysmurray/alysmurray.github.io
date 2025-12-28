@@ -1,0 +1,6 @@
+# Robots.txt for Alys Murray's website
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://adamdavies1915.github.io/alysWebsite/sitemap-index.xml
