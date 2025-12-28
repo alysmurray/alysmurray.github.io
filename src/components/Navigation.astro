@@ -13,7 +13,11 @@ const navLinks = [
 ];
 
 function isActive(href: string) {
-  if (href === '/') return currentPath === '/';
+  // Home page - exact match only (with or without trailing slash)
+  if (href === base) {
+    return currentPath === base || currentPath === base.replace(/\/$/, '');
+  }
+  // Other pages - check if current path starts with href
   return currentPath.startsWith(href);
 }
 ---
@@ -37,7 +41,7 @@ function isActive(href: string) {
               href={link.href}
               class:list={[
                 "text-sm font-medium tracking-wide uppercase transition-colors relative",
-                isActive(link.href)
+                (link.href === base || isActive(link.href))
                   ? "text-burgundy"
                   : "text-charcoal-light hover:text-burgundy"
               ]}
@@ -90,7 +94,7 @@ function isActive(href: string) {
               href={link.href}
               class:list={[
                 "block py-2 text-base font-medium transition-colors",
-                isActive(link.href)
+                (link.href === base || isActive(link.href))
                   ? "text-burgundy"
                   : "text-charcoal-light hover:text-burgundy"
               ]}
