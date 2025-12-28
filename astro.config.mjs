@@ -5,8 +5,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://adamdavies1915.github.io',
-  base: '/alysWebsite/',
+  site: process.env.SITE_URL || 'https://alysmurray.com',
+  base: process.env.BASE_PATH || '/',
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()]
