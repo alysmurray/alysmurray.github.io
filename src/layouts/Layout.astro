@@ -27,6 +27,15 @@ const ogImage = new URL(`${base}${image}`, siteUrl).href;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WT3PVGJPK3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-WT3PVGJPK3');
+    </script>
+
     <!-- Preconnect to Google Fonts for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -90,6 +99,78 @@ const ogImage = new URL(`${base}${image}`, siteUrl).href;
       <slot />
     </main>
     <Footer />
+
+    <!-- Custom GA4 Event Tracking -->
+    <script is:inline>
+      // Scroll depth tracking
+      (function() {
+        const thresholds = [25, 50, 75, 100];
+        const tracked = new Set();
+
+        function getScrollPercent() {
+          const h = document.documentElement;
+          const b = document.body;
+          const st = 'scrollTop';
+          const sh = 'scrollHeight';
+          return Math.round((h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100);
+        }
+
+        window.addEventListener('scroll', function() {
+          const percent = getScrollPercent();
+          thresholds.forEach(function(threshold) {
+            if (percent >= threshold && !tracked.has(threshold)) {
+              tracked.add(threshold);
+              if (typeof gtag === 'function') {
+                gtag('event', 'scroll_depth', {
+                  percent_scrolled: threshold,
+                  page_path: window.location.pathname
+                });
+              }
+            }
+          });
+        }, { passive: true });
+      })();
+
+      // Pre-order and retailer link tracking
+      document.addEventListener('click', function(e) {
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        const href = link.href || '';
+        const text = link.textContent || '';
+
+        // Track pre-order page visits
+        if (href.includes('a-little-buzzed') && !href.includes('http')) {
+          if (typeof gtag === 'function') {
+            gtag('event', 'preorder_click', {
+              link_text: text.trim(),
+              link_url: href
+            });
+          }
+        }
+
+        // Track retailer clicks
+        const retailers = {
+          'gardendistrictbookshop.com': 'Garden District Books',
+          'barnesandnoble.com': 'Barnes & Noble',
+          'amazon.com': 'Amazon',
+          'books.apple.com': 'Apple Books',
+          'bookshop.org': 'Bookshop.org'
+        };
+
+        for (const [domain, name] of Object.entries(retailers)) {
+          if (href.includes(domain)) {
+            if (typeof gtag === 'function') {
+              gtag('event', 'retailer_click', {
+                retailer: name,
+                link_url: href
+              });
+            }
+            break;
+          }
+        }
+      });
+    </script>
   </body>
 </html>
 
