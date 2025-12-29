@@ -122,10 +122,14 @@ import Layout from '../layouts/Layout.astro';
 
               <button
                 type="submit"
-                class="w-full px-8 py-3 bg-burgundy text-cream rounded-full font-medium hover:bg-burgundy-dark transition-colors"
+                id="submit-btn"
+                class="w-full px-8 py-3 bg-burgundy text-cream rounded-full font-medium hover:bg-burgundy-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Send Message
               </button>
+
+              <!-- Form feedback -->
+              <div id="form-status" class="hidden mt-4 p-4 rounded-lg text-center"></div>
             </form>
 
             <p class="text-center text-charcoal-light text-sm mt-6">
@@ -136,4 +140,46 @@ import Layout from '../layouts/Layout.astro';
       </div>
     </div>
   </section>
+
+  <script>
+    const form = document.querySelector('form');
+    const submitBtn = document.getElementById('submit-btn');
+    const formStatus = document.getElementById('form-status');
+
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      if (!submitBtn || !formStatus) return;
+
+      // Update button state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Sending...';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          // Success
+          formStatus.className = 'mt-4 p-4 rounded-lg text-center bg-teal/20 text-teal-dark';
+          formStatus.textContent = 'Thank you! Your message has been sent. I\'ll get back to you soon.';
+          form.reset();
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        // Error
+        formStatus.className = 'mt-4 p-4 rounded-lg text-center bg-burgundy/20 text-burgundy-dark';
+        formStatus.textContent = 'Oops! Something went wrong. Please try again or email directly.';
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Message';
+      }
+    });
+  </script>
 </Layout>
