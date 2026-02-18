@@ -4,7 +4,17 @@ import Layout from '../layouts/Layout.astro';
 const base = import.meta.env.BASE_URL;
 ---
 
-<Layout title="A Little Buzzed Pre-Order | Alys Murray" description="Pre-order A Little Buzzed by Alys Murray. Get signed, personalized copies with exclusive sticker packs from Garden District Books.">
+<Layout title="A Little Buzzed | Alys Murray" description="Buy A Little Buzzed by Alys Murray. Get signed, personalized copies with exclusive sticker packs from Garden District Books.">
+  <!-- Release Party Banner -->
+  <div class="bg-burgundy text-cream text-center py-3 px-6">
+    <a href={`${base}a-little-buzzed-release-party`} class="inline-flex items-center gap-2 text-sm md:text-base font-medium hover:text-white transition-colors">
+      Join the release party on Feb 24 in New Orleans! Get tickets
+      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+      </svg>
+    </a>
+  </div>
+
   <!-- Hero -->
   <section class="relative py-24 md:py-32 overflow-hidden">
     <div class="absolute inset-0 bg-[#243551]"></div>
@@ -30,14 +40,14 @@ const base = import.meta.env.BASE_URL;
         <!-- Content -->
         <div class="order-1 md:order-2 text-center md:text-left">
           <span class="inline-block px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium mb-6">
-            Coming February 2025
+            Available Now
           </span>
           <h1 class="text-white mb-6">
             A Little Buzzed<br/>
-            <span class="text-3xl md:text-4xl">Pre-Order!</span>
+            <span class="text-3xl md:text-4xl">Out Now!</span>
           </h1>
           <p class="text-white/90 text-lg leading-relaxed mb-8">
-            The newest romantic comedy from bestselling author Alys Murray is almost here!
+            The newest romantic comedy from bestselling author Alys Murray is here!
           </p>
         </div>
       </div>
@@ -70,7 +80,7 @@ const base = import.meta.env.BASE_URL;
           class="inline-flex flex-col items-center px-8 py-4 bg-burgundy text-cream rounded-2xl font-medium hover:bg-burgundy-dark transition-all hover:scale-105 shadow-lg hover:shadow-xl"
         >
           <span class="flex items-center gap-3 text-lg">
-            Pre-Order from Garden District Books
+            Buy from Garden District Books
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
             </svg>
@@ -85,7 +95,7 @@ const base = import.meta.env.BASE_URL;
   <section class="py-24 bg-cream-dark">
     <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
       <h2 class="font-serif text-2xl mb-4 text-center">Also Available At</h2>
-      <p class="text-charcoal-light mb-12 text-center">Pre-order from your favorite retailer</p>
+      <p class="text-charcoal-light mb-12 text-center">Buy from your favorite retailer</p>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
         <a
@@ -152,7 +162,7 @@ const base = import.meta.env.BASE_URL;
     <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
       <h2 class="font-serif text-2xl md:text-3xl mb-6 text-white text-center">Don't Miss Out!</h2>
       <p class="text-white/90 mb-8 text-lg text-center">
-        Pre-order now for signed copies and exclusive bonus content.
+        Get signed copies and exclusive bonus content.
       </p>
       <a
         href="https://www.gardendistrictbookshop.com/product-page/a-little-buzzed"
@@ -160,7 +170,7 @@ const base = import.meta.env.BASE_URL;
         rel="noopener noreferrer"
         class="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#243551] rounded-full font-medium hover:bg-cream transition-colors text-lg"
       >
-        Pre-Order Now
+        Buy Now
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
         </svg>

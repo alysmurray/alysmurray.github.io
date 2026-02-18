@@ -158,6 +158,17 @@ const ogImage = new URL(`${base}${image}`, siteUrl).href;
           'bookshop.org': 'Bookshop.org'
         };
 
+        // Track Eventbrite ticket clicks
+        if (href.includes('eventbrite.com')) {
+          if (typeof gtag === 'function') {
+            gtag('event', 'ticket_click', {
+              link_text: text.trim(),
+              link_url: href,
+              event_name: 'a_little_buzzed_release_party'
+            });
+          }
+        }
+
         for (const [domain, name] of Object.entries(retailers)) {
           if (href.includes(domain)) {
             if (typeof gtag === 'function') {
