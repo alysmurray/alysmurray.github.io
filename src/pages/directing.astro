@@ -43,17 +43,6 @@ const btsImages = [
           <p class="text-cream/90 text-lg leading-relaxed mb-6">
             A 2025 horror-romance-comedy short film, created in collaboration with Netflix and the Inevitable Foundation Visionary Fellowship.
           </p>
-          <div class="flex flex-wrap gap-3">
-            <span class="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
-              Horror-Comedy
-            </span>
-            <span class="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
-              Romance
-            </span>
-            <span class="px-4 py-2 bg-teal text-cream rounded-full text-sm font-medium">
-              Netflix x Inevitable Foundation
-            </span>
-          </div>
         </div>
 
         <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
@@ -67,15 +56,23 @@ const btsImages = [
     </div>
   </section>
 
+  <!-- Poster -->
+  <section class="py-24 bg-cream-dark">
+    <div class="max-w-6xl mx-auto px-6 flex justify-center">
+      <div class="rounded-2xl overflow-hidden shadow-2xl max-w-sm">
+        <img
+          src={`${base}images/directing/poster.png`}
+          alt="Beware C*ckblocking Ghosts poster"
+          class="w-full h-auto"
+        />
+      </div>
+    </div>
+  </section>
+
   <!-- Synopsis -->
   <section class="py-24 bg-cream">
     <div class="max-w-4xl mx-auto px-6">
-      <SectionHeader
-        label="Synopsis"
-        title="The Story"
-      />
-
-      <div class="mt-12 max-w-2xl mx-auto">
+      <div class="max-w-2xl mx-auto">
         <blockquote class="font-serif text-2xl md:text-3xl italic text-charcoal leading-relaxed text-center">
           "A teenage girl must escape with her life when the demonic ghost of her dead best friend gets murderously jealous of her homecoming plans."
         </blockquote>
