@@ -90,6 +90,8 @@ portfolio-home-book-items:
     url: "/books/tea-and-a-cowboy/"
 
 portfolio-home-movie-items:
+  # - image: "assets/images/portfolio/beware_ghosts.png"
+  #   url: "/movies/beware-ghosts"
   - image: "assets/images/portfolio/new_orleans_noel.jpeg"
     url: "/movies/new-orleans-noel"
   - image: "assets/images/portfolio/every_time.jpeg"
@@ -158,6 +160,11 @@ portfolio-items:
     url: "/books/tea-and-a-cowboy/"
     portfolio-type:
       - type: "novels"
+
+  # - image: "assets/images/portfolio/beware_ghosts.png"
+  #   url: "/movies/beware-ghosts"
+  #   portfolio-type:
+  #     - type: "movies"
 
   - image: "assets/images/portfolio/christmas_louisiana.jpg"
     url: "/movies/christmas-in-louisiana"
