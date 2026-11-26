@@ -4,9 +4,10 @@ interface Props {
   title: string;
   description?: string;
   align?: 'left' | 'center';
+  showLabel?: boolean;
 }
 
-const { label, title, description, align = 'center' } = Astro.props;
+const { label, title, description, align = 'center', showLabel = false } = Astro.props;
 
 const alignClasses = {
   left: 'text-left',
@@ -15,12 +16,10 @@ const alignClasses = {
 ---
 
 <header class:list={["max-w-2xl", alignClasses[align]]}>
-  {label && (
-    <span class="inline-block text-xs font-medium uppercase tracking-[0.2em] text-burgundy mb-4">
-      {label}
-    </span>
+  <!-- Preserve labels on surfaces where the original layout is requested. -->
+  {showLabel && label && (
+    <span class="inline-block text-xs font-medium uppercase tracking-[0.2em] text-burgundy mb-4">{label}</span>
   )}
-
   <h2 class="font-serif">{title}</h2>
 
   {description && (

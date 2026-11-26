@@ -183,8 +183,8 @@ const ogImage = new URL(`${base}${image}`, siteUrl).href;
 </html>
 
 <style is:global>
-  /* Smooth page transitions */
-  main {
-    animation: fadeIn 0.4s ease-out;
+  /* Keep page content visible immediately when reduced motion is requested. */
+  @media (prefers-reduced-motion: no-preference) {
+    main { animation: fadeIn 0.4s ease-out; }
   }
 </style>

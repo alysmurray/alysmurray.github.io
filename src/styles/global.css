@@ -8,15 +8,15 @@
   --color-cream-dark: #F5EDE4;
   --color-rose: #C4A484;
   --color-rose-light: #D4C4B0;
-  --color-rose-dark: #A68B6A;
+  --color-rose-dark: #725C44;
   --color-burgundy: #722F37;
   --color-burgundy-light: #8B4049;
   --color-burgundy-dark: #5A252C;
 
   /* Colors - Cool cinematic palette (Filmmaker brand) */
-  --color-teal: #5DB8B0;
+  --color-teal: #205650;
   --color-teal-light: #7ECBC4;
-  --color-teal-dark: #4AA89F;
+  --color-teal-dark: #194B46;
 
   /* Neutrals */
   --color-charcoal: #2C2C2C;
@@ -122,4 +122,64 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Shared proportions for the existing author and book pages. */
+:root {
+  --section-padding: clamp(3rem, 6vw, 5rem);
+  --button-height: 3.25rem;
+}
+
+@layer base {
+  h1, h2, h3, h4 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+  :focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+}
+
+.section-space { padding-block: var(--section-padding); }
+
+.site-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--button-height);
+  padding: .75rem 2rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  transition: background-color .2s ease, color .2s ease, transform .2s ease;
+}
+.site-button:hover { transform: translateY(-2px); }
+.site-button:active { transform: translateY(0); }
+
+.retailer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--color-cream);
+  color: var(--color-burgundy);
+  font-weight: 500;
+  text-align: center;
+  transition: background-color .2s ease, color .2s ease;
+}
+.retailer-link:hover { background: var(--color-burgundy); color: var(--color-cream); }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .fade-in, .fade-in-up, .animate-bounce, .animate-pulse {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  /* Keep color/focus feedback; remove travel and zoom for motion-sensitive readers. */
+  .site-button, .preorder-button, .group, .group img, .group h3, .group svg,
+  img[class*="transition-transform"] { transition-property: color, background-color, opacity; }
+  .site-button:hover, .site-button:active, .preorder-button:hover,
+  .group:hover, .group:hover img, .group:hover h3, .group:hover svg,
+  img[class*="transition-transform"]:hover { transform: none; }
 }
