@@ -42,7 +42,10 @@ const bookSchema = {
     <div class="hero-inner">
       <div class="cover-wrap">
         <!-- Source: official cover https://images.penguinrandomhouse.com/cover/700jpg/9780593819739; alt text uses publisher image label. -->
-        <img src={`${base}images/books/full/the-girlfriend-exxxperience.jpg`} alt="The Girlfriend Exxxperience by Alys Murray" width="454" height="700" fetchpriority="high" decoding="async" />
+        <!-- Source: responsive WebP sizes derived from the existing official publisher cover, images/books/full/the-girlfriend-exxxperience.jpg; artwork unchanged, no upscaling. -->
+        <img src={`${base}images/books/full/the-girlfriend-exxxperience-454.webp`}
+            srcset={`${base}images/books/full/the-girlfriend-exxxperience-256.webp 256w, ${base}images/books/full/the-girlfriend-exxxperience-352.webp 352w, ${base}images/books/full/the-girlfriend-exxxperience-454.webp 454w`}
+            sizes="(min-width: 768px) 352px, (max-width: 335px) calc(100vw - 48px), 288px" alt="The Girlfriend Exxxperience by Alys Murray" width="454" height="700" fetchpriority="high" decoding="async" />
       </div>
       <div class="hero-copy">
         <h1>The Girlfriend Exxxperience</h1>

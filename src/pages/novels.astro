@@ -112,8 +112,11 @@ const books = [
     <div class="max-w-6xl mx-auto px-6">
       <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
         <div class="w-56 md:w-64 rounded-lg overflow-hidden shadow-xl flex-shrink-0">
-          <img
-            src={`${base}images/books/full/the-girlfriend-exxxperience.jpg`}
+          <!-- Source: responsive WebP sizes derived from the existing official publisher cover, images/books/full/the-girlfriend-exxxperience.jpg; artwork unchanged, no upscaling. -->
+        <img
+            src={`${base}images/books/full/the-girlfriend-exxxperience-454.webp`}
+            srcset={`${base}images/books/full/the-girlfriend-exxxperience-256.webp 256w, ${base}images/books/full/the-girlfriend-exxxperience-352.webp 352w, ${base}images/books/full/the-girlfriend-exxxperience-454.webp 454w`}
+            sizes="(min-width: 768px) 256px, 224px"
             alt="The Girlfriend Exxxperience by Alys Murray"
             width="454" height="700"
             class="w-full h-auto"
