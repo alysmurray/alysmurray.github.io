@@ -42,13 +42,13 @@ const base = import.meta.env.BASE_URL;
       <div class="fade-in-up stagger-3 flex flex-wrap justify-center gap-4">
         <a
           href={`${base}screenwriting`}
-          class="w-52 text-center py-3 border-2 border-teal text-teal rounded-full font-medium hover:bg-teal hover:text-cream transition-colors"
+          class="site-button w-52 text-center py-3 border-2 border-teal text-teal rounded-full font-medium hover:bg-teal hover:text-cream transition-colors"
         >
           View Filmography
         </a>
         <a
           href={`${base}novels`}
-          class="w-52 text-center py-3 border-2 border-burgundy text-burgundy rounded-full font-medium hover:bg-burgundy hover:text-cream transition-colors"
+          class="site-button w-52 text-center py-3 border-2 border-burgundy text-burgundy rounded-full font-medium hover:bg-burgundy hover:text-cream transition-colors"
         >
           Explore Books
         </a>
@@ -56,7 +56,7 @@ const base = import.meta.env.BASE_URL;
 
       <!-- Scroll indicator -->
       <a href="#featured" aria-label="Scroll to featured content" class="fade-in stagger-4 absolute bottom-8 left-1/2 -translate-x-1/2 cursor-pointer hover:text-charcoal transition-colors">
-        <svg class="w-6 h-6 text-charcoal-light animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+        <svg class="w-6 h-6 text-charcoal-light" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
         </svg>
       </a>
@@ -69,12 +69,12 @@ const base = import.meta.env.BASE_URL;
       <p class="text-burgundy font-medium mb-4">Available for Pre-order</p>
       <h2 id="featured-book" class="font-serif text-3xl mb-6"><a href={`${base}the-girlfriend-exxxperience/`} class="hover:text-burgundy">The Girlfriend Exxxperience</a></h2>
       <p class="text-charcoal-light leading-relaxed mb-6">A ghostwriter for an adult-only content site finds herself falling for the one person she can't have—a subscriber—in this irresistibly spicy rom-com.</p>
-      <a href={`${base}the-girlfriend-exxxperience/`} class="inline-flex px-8 py-4 bg-burgundy text-cream rounded-full hover:bg-burgundy-dark transition-colors">Pre-order Your Copy</a>
+      <a href={`${base}the-girlfriend-exxxperience/`} class="site-button inline-flex px-8 py-4 bg-burgundy text-cream rounded-full hover:bg-burgundy-dark transition-colors">Pre-order Your Copy</a>
     </div>
   </section>
 
   <!-- Featured Work Section -->
-  <section id="featured" class="py-24 bg-cream">
+  <section id="featured" class="section-space bg-cream">
     <div class="max-w-6xl mx-auto px-6">
       <SectionHeader
         title="Stories That Move You"
@@ -106,7 +106,7 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- Latest News Section -->
-  <section class="py-24 bg-cream-dark">
+  <section class="section-space bg-cream-dark">
     <div class="max-w-6xl mx-auto px-6">
       <SectionHeader
         label="2025"
@@ -143,7 +143,7 @@ const base = import.meta.env.BASE_URL;
   </section>
 
   <!-- Quote Section -->
-  <section class="py-24 bg-burgundy text-cream">
+  <section class="section-space bg-burgundy text-cream">
     <div class="max-w-4xl mx-auto px-6 text-center">
       <svg class="w-12 h-12 mx-auto mb-8 text-cream/50" fill="currentColor" viewBox="0 0 24 24">
         <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
@@ -153,7 +153,7 @@ const base = import.meta.env.BASE_URL;
       </blockquote>
       <a
         href={`${base}contact`}
-        class="inline-flex items-center gap-2 px-6 py-3 bg-cream text-burgundy rounded-full hover:bg-cream-dark transition-colors font-medium"
+        class="site-button inline-flex items-center gap-2 px-6 py-3 bg-cream text-burgundy rounded-full hover:bg-cream-dark transition-colors font-medium"
       >
         Get in touch
         <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

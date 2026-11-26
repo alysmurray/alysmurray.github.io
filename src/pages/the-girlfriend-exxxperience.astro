@@ -52,7 +52,7 @@ const bookSchema = {
         <p class="byline">by <a href={`${base}about/`}>Alys Murray</a></p>
         <p class="hook">{description}</p>
         <p class="release">Available on <time datetime="2027-04-13">Apr 13, 2027</time></p>
-        <a class="preorder-button" href="#preorder">Pre-order</a>
+        <a class="site-button preorder-button" href="#preorder">Pre-order</a>
       </div>
     </div>
   </section>
@@ -63,7 +63,7 @@ const bookSchema = {
       <h2 id="retailers-heading">Preorder from:</h2>
       <div class="retailer-links">
         {retailers.map((retailer) => (
-          <a href={retailer.href} target="_blank" rel="noopener noreferrer">{retailer.name}</a>
+          <a class="retailer-link" href={retailer.href} target="_blank" rel="noopener noreferrer">{retailer.name}</a>
         ))}
       </div>
     </div>
@@ -100,7 +100,7 @@ const bookSchema = {
   <section class="preorder-section" aria-label="Pre-order">
     <!-- Source: "Pre-order" label requested by user; title from publisher; button links to the retailer selection requested by user. -->
     <h2>The Girlfriend Exxxperience</h2>
-    <a class="preorder-button" href="#preorder">Pre-order</a>
+    <a class="site-button preorder-button" href="#preorder">Pre-order</a>
   </section>
 </Layout>
 
@@ -114,19 +114,16 @@ const bookSchema = {
   .byline a { text-decoration: underline; text-decoration-color: #fdf8f377; text-underline-offset: 6px; }
   .hook { font-size: 1.125rem; line-height: 1.7; margin-bottom: 1.5rem; }
   .release { margin-bottom: 1.5rem; }
-  .preorder-button { display: inline-flex; align-items: center; justify-content: center; padding: .875rem 2.25rem; border-radius: 999px; background: var(--color-cream); color: #243551; font-weight: 500; min-height: 48px; transition: background .2s, transform .2s; }
-  .preorder-button:hover { background: var(--color-cream-dark); transform: translateY(-2px); }
-  .preorder-button:active { transform: translateY(0); }
+  .preorder-button { background: var(--color-cream); color: #243551; }
+  .preorder-button:hover { background: var(--color-cream-dark); }
   a:focus-visible { outline: 3px solid var(--color-rose-dark); outline-offset: 5px; }
   .retailers-section { padding: 4rem 1.5rem; background: var(--color-cream-dark); scroll-margin-top: 5rem; }
   .retailers-inner { max-width: 64rem; margin-inline: auto; }
   .retailers-section h2 { text-align: center; margin-bottom: 2rem; }
   .retailer-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
-  .retailer-links a { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 4.5rem; padding: 1rem; background: var(--color-cream); color: var(--color-burgundy); border-radius: 12px; font-weight: 500; transition: background .2s; }
-  .retailer-links a:hover { background: var(--color-burgundy); color: var(--color-cream); }
   @media(max-width:767px) { .retailer-links { grid-template-columns: repeat(2, 1fr); } }
-  .reading-width { max-width: 48rem; margin-inline: auto; }
-  .synopsis-section,.details-section { padding: 5rem 1.5rem; }
+  .reading-width { max-width: 62ch; margin-inline: auto; }
+  .synopsis-section,.details-section { padding: var(--section-padding) 1.5rem; }
   .synopsis-section h2,.details-section h2 { margin-bottom: 2rem; }
   .synopsis-section p { max-width: none; line-height: 1.8; margin-bottom: 1.5rem; color: var(--color-charcoal-light); }
   .synopsis-section p:last-child { margin-bottom: 0; }
@@ -141,7 +138,6 @@ const bookSchema = {
     .hero-copy { grid-row: 1; text-align: center; }
     .hook { margin-inline: auto; }
     .cover-wrap img { width: 18rem; }
-    .synopsis-section,.details-section { padding-block: 3.5rem; }
     dl { grid-template-columns: 1fr; }
   }
   @media(prefers-reduced-motion:reduce) { .preorder-button { transition: none; transform: none; } }
