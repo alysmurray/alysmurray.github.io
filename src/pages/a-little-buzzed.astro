@@ -2,11 +2,41 @@
 import Layout from '../layouts/Layout.astro';
 
 const base = import.meta.env.BASE_URL;
+const siteUrl = import.meta.env.SITE || 'https://alysmurray.com';
+const bookUrl = new URL(`${base}a-little-buzzed/`, siteUrl).href;
+// Source: publisher Book Description, opening marketing hook (verbatim).
+const description = "A sex toy engineer with one big secret finally meets her match, and together they’ll put their own products to the test in this steamy romantic comedy.";
+// Source: publisher Product Details; genre labels from Barnes & Noble Categories.
+const bookSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Book',
+  '@id': `${bookUrl}#book`,
+  name: 'A Little Buzzed',
+  url: bookUrl,
+  author: { '@id': new URL(`${base}#person`, siteUrl).href },
+  image: new URL(`${base}images/books/full/a-little-buzzed.jpg`, siteUrl).href,
+  description,
+  isbn: '9780593819715',
+  bookFormat: 'https://schema.org/Paperback',
+  datePublished: '2026-02-17',
+  numberOfPages: 368,
+  publisher: { '@type': 'Organization', name: 'Berkley' },
+  genre: ['Contemporary Romance', 'Romantic Comedy', 'Workplace/Office Romance'],
+};
 ---
 
-<Layout title="A Little Buzzed | Alys Murray" description="Buy A Little Buzzed by Alys Murray. Available now from Garden District Book Shop and other retailers.">
+<!-- Source: title supplied verbatim in the user's SEO action plan. Description: publisher Book Description, verbatim. -->
+<Layout title="A Little Buzzed by Alys Murray – Romantic Comedy Novel" description={description} image="images/books/full/a-little-buzzed.jpg" imageWidth={700} imageHeight={1080}>
+  <Fragment slot="head">
+
+
+    <Fragment set:html={"<!-- Source: title from user's SEO action plan; meta/OG/Twitter descriptions copied verbatim from publisher Book Description: https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/ (accessed 2026-11-26). -->"} />
+    <Fragment set:html={"<!-- Source: Book JSON-LD facts from publisher Product Details at https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/; genre labels from https://www.barnesandnoble.com/w/a-little-buzzed-alys-murray/1147444466 Categories. Date formatted as ISO 8601; format mapped to schema.org/Paperback. -->"} />
+    <script type="application/ld+json" set:html={JSON.stringify(bookSchema).replace(/</g, '\\u003c')} />
+  </Fragment>
   <!-- Hero -->
   <section class="relative py-24 md:py-32 overflow-hidden">
+    <!-- Source: retained promotional text, purchase labels, retailer names and cover alt text from this page at repository commit 8abfb3a (src/pages/a-little-buzzed.astro); live source: https://alysmurray.com/a-little-buzzed/. Added text has more specific comments below. -->
     <div class="absolute inset-0 bg-[#243551]"></div>
 
     <!-- Decorative elements -->
@@ -22,61 +52,33 @@ const base = import.meta.env.BASE_URL;
             <img
               src={`${base}images/books/full/a-little-buzzed.jpg`}
               alt="A Little Buzzed book cover"
-              class="relative w-72 md:w-80 rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
+              width="700" height="1080" fetchpriority="high" decoding="async"
+              class="relative w-72 max-w-full h-auto md:w-80 rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>
 
         <!-- Content -->
         <div class="order-1 md:order-2 text-center md:text-left">
-          <span class="inline-block px-4 py-2 bg-white/20 text-white rounded-full text-sm font-medium mb-6">
-            Available Now
-          </span>
+    <!-- Source: book title and author from publisher; H1 combination requested in user action plan. -->
           <h1 class="text-white mb-6">
             A Little Buzzed<br/>
-            <span class="text-3xl md:text-4xl">Out Now!</span>
+            <span class="text-3xl md:text-4xl">by <a href={`${base}about/`} class="underline decoration-white/40 underline-offset-4 hover:decoration-white">Alys Murray</a></span>
           </h1>
+          <!-- Source: publisher Book Description, opening marketing hook, verbatim: https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/. Same sourced text as the meta description. -->
           <p class="text-white/90 text-lg leading-relaxed mb-8">
-            The newest romantic comedy from bestselling author Alys Murray is here!
+            {description}
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Buy from Garden District -->
-  <section class="py-24 bg-cream">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="bg-gradient-to-br from-rose-light/30 to-cream-dark rounded-3xl p-8 md:p-12 text-center">
-        <h2 class="font-serif text-2xl md:text-3xl mb-6">Get Your Copy</h2>
-
-        <p class="text-xl text-charcoal leading-relaxed mb-8 max-w-2xl mx-auto">
-          Pick up <strong>A Little Buzzed</strong> from our preferred bookshop, the Garden District Book Shop in New Orleans.
-        </p>
-
-        <a
-          href="https://www.gardendistrictbookshop.com/product-page/a-little-buzzed"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex flex-col items-center px-8 py-4 bg-burgundy text-cream rounded-2xl font-medium hover:bg-burgundy-dark transition-all hover:scale-105 shadow-lg hover:shadow-xl"
-        >
-          <span class="flex items-center gap-3 text-lg">
-            Buy from Garden District Book Shop
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-            </svg>
-          </span>
-          <span class="text-cream/70 text-xs mt-1">New Orleans' beloved independent bookstore since 1979</span>
-        </a>
-      </div>
-    </div>
-  </section>
-
   <!-- Other Retailers -->
-  <section class="py-24 bg-cream-dark">
+  <section id="retailers" class="py-24 bg-cream-dark scroll-mt-24">
     <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
-      <h2 class="font-serif text-2xl mb-4 text-center">Also Available At</h2>
-      <p class="text-charcoal-light mb-12 text-center">Buy from your favorite retailer</p>
+      <!-- Source: existing retailer subtitle, promoted to heading at the user's request. -->
+      <h2 class="font-serif text-2xl mb-12 text-center">Buy from your favorite retailer</h2>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full">
         <a
@@ -132,30 +134,119 @@ const base = import.meta.env.BASE_URL;
         A sex toy engineer with one big secret finally meets her match, and together they'll put their own products to the test in this steamy romantic comedy.
       </p>
 
-      <p class="text-charcoal-light leading-relaxed text-center">
-        Scout Porter is screwed. Not literally, of course. Literally, she's a twenty-six-year-old virgin, thanks to a relationship so disastrous she swore off love and sex for good. Metaphorically, she's screwed because she's just been assigned to work with the most annoyingly charming software developer she's ever met...
+    <!-- Source: https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/ Book Description, paragraph 1; verbatim, HTML entities decoded; accessed 2026-11-26. -->
+      <p class="text-charcoal-light leading-relaxed mb-6 text-left">
+        Scout Porter is screwed. Not literally, of course. Literally, she’s a twenty-six-year-old virgin, thanks to a relationship so disastrous she swore off love and sex for good. Metaphorically, she’s screwed because the entire office of BuzzCorp, the sex toy start-up where she’s head engineer, just found out. Scout needs her team to stay focused on their upcoming launch, not her lack of a sex life, so she finds the simplest solution: lose her V-card—and fast—then get back to business as usual.
       </p>
+      <!-- Source: https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/ Book Description, paragraph 2; verbatim, HTML entities decoded; accessed 2026-11-26. -->
+      <p class="text-charcoal-light leading-relaxed mb-6 text-left">
+        Enter Hudson Bailey, the nerdy and charming software developer hired to build the app for Scout’s latest creation. The only problem is, he’s as inexperienced with sex toys as she is with sex. Fortunately, he’s all too eager to learn, and they agree that one very educational, totally professional hook-up will solve both of their problems. All for research, obviously.
+      </p>
+      <!-- Source: https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/ Book Description, paragraph 3; verbatim, HTML entities decoded; accessed 2026-11-26. -->
+      <p class="text-charcoal-light leading-relaxed mb-6 text-left">
+        But their little experiment yields unexpected results—chemistry so off the charts Scout starts to think she might actually want more than just a one-time fling. When their budding relationship is threatened by the return of Scout’s notorious ex, both Scout and Hudson will have to decide if they’ve reached their climax as a couple, or if they’re willing to risk everything for a chance at true love.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-cream-dark" aria-labelledby="themes">
+    <!-- Source: section heading uses the user's requested "romance tropes and themes"; labels copied verbatim from Barnes & Noble Categories: https://www.barnesandnoble.com/w/a-little-buzzed-alys-murray/1147444466 (accessed 2026-11-26). No inferred trope claims. -->
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 id="themes" class="font-serif text-2xl md:text-3xl mb-8">Romance Tropes and Themes</h2>
+      <ul class="flex flex-wrap gap-3 text-charcoal">
+        <li class="px-4 py-3 bg-cream rounded-xl">Contemporary Romance</li>
+        <li class="px-4 py-3 bg-cream rounded-xl">Romantic Comedy</li>
+        <li class="px-4 py-3 bg-cream rounded-xl">Workplace/Office Romance</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="praise-section" aria-labelledby="praise">
+    <!-- Source: heading supplied in user's SEO action plan. Layout selected by user from mockup option 1; quotes remain verbatim excerpts with sources below. -->
+    <div class="praise-inner">
+      <h2 id="praise">Praise for <em>A Little Buzzed</em></h2>
+<figure class="quote feature">
+<!-- Source: https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/; Lana Ferguson; verbatim contiguous endorsement excerpt, accessed 2026-11-26. -->
+<blockquote>“Smart, snarky, and vibrating with sexual tension—this book is a must read!”</blockquote><figcaption><a href="https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/" target="_blank" rel="noopener noreferrer">Lana Ferguson</a></figcaption></figure>
+      <div class="praise-grid">
+<figure class="quote ">
+<!-- Source: https://www.kirkusreviews.com/book-reviews/alys-murray/a-little-buzzed/; Kirkus Reviews; verbatim contiguous endorsement excerpt, accessed 2026-11-26. -->
+<blockquote>“Nerdy, naughty, and next on your TBR list.”</blockquote><figcaption><a href="https://www.kirkusreviews.com/book-reviews/alys-murray/a-little-buzzed/" target="_blank" rel="noopener noreferrer">Kirkus Reviews</a></figcaption></figure>
+
+<figure class="quote ">
+<!-- Source: https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/; Sierra Simone; verbatim contiguous endorsement excerpt, accessed 2026-11-26. -->
+<blockquote>“Delightfully fresh and thoroughly hot, A Little Buzzed is the new standard for clever, tender debauchery.”</blockquote><figcaption><a href="https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/" target="_blank" rel="noopener noreferrer">Sierra Simone</a></figcaption></figure>
+
+<figure class="quote closing">
+<!-- Source: https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/; Navessa Allen; verbatim contiguous endorsement excerpt, accessed 2026-11-26. -->
+<blockquote>“Immaculate!”</blockquote><figcaption><a href="https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/" target="_blank" rel="noopener noreferrer">Navessa Allen</a></figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-cream-dark" aria-labelledby="details">
+    <!-- Source: Product Details heading, labels and values from https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/ (US paperback, accessed 2026-11-26). Formats copied from the same page. -->
+    <div class="max-w-3xl mx-auto px-6">
+      <h2 id="details" class="font-serif text-2xl md:text-3xl mb-8">Product Details</h2>
+      <dl class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5">
+        <div><dt class="font-medium">Author</dt><dd><a href={`${base}about/`} class="text-burgundy underline">Alys Murray</a></dd></div>
+        <div><dt class="font-medium">Published by</dt><dd>Berkley</dd></div>
+        <div><dt class="font-medium">Published on</dt><dd><time datetime="2026-02-17">Feb 17, 2026</time></dd></div>
+        <div><dt class="font-medium">ISBN</dt><dd>9780593819715 (Paperback)</dd></div>
+        <div><dt class="font-medium">Pages</dt><dd>368</dd></div>
+        <div><dt class="font-medium">Formats</dt><dd>Paperback, Ebook, Audiobook Download</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section id="sample" class="py-20 bg-cream" aria-label="Read Sample">
+    <!-- Source: "Read Sample" label and #excerpt destination from publisher page https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/. Publisher-hosted authorized excerpt; no chapter text reproduced here because its notice requires written publisher permission. -->
+    <div class="max-w-3xl mx-auto px-6 flex justify-center">
+      <a href="https://www.penguinrandomhouse.com/books/769296/a-little-buzzed-by-alys-murray/#excerpt" class="inline-flex items-center justify-center px-10 py-4 bg-burgundy text-cream rounded-full text-lg font-medium hover:bg-burgundy-dark transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy">Read Sample</a>
     </div>
   </section>
 
   <!-- CTA -->
   <section class="py-16 bg-[#243551] text-white">
     <div class="max-w-4xl mx-auto px-6 flex flex-col items-center">
+      <!-- Source: heading retained from this page; "Available Now" reused from its hero and "Get Your Copy" from its original purchase section (commit 8abfb3a). Retailer-neutral revision requested by user. -->
       <h2 class="font-serif text-2xl md:text-3xl mb-6 text-white text-center">Get Your Copy Today</h2>
       <p class="text-white/90 mb-8 text-lg text-center">
-        Available now from Garden District Book Shop and other retailers.
+        Available Now
       </p>
       <a
-        href="https://www.gardendistrictbookshop.com/product-page/a-little-buzzed"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="#retailers"
         class="inline-flex items-center gap-2 px-8 py-4 bg-white text-[#243551] rounded-full font-medium hover:bg-cream transition-colors text-lg"
       >
-        Buy Now
-        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-        </svg>
+        Get Your Copy
       </a>
     </div>
   </section>
 </Layout>
+
+<style>
+  .praise-section { padding: 5rem 1.5rem; background: var(--color-cream); }
+  .praise-inner { max-width: 72rem; margin-inline: auto; }
+  .praise-inner h2 { margin: 0 0 3rem; font-size: clamp(2.25rem, 4vw, 3.625rem); line-height: 1.3; letter-spacing: -.02em; text-wrap: balance; scroll-margin-top: 7rem; }
+  .praise-inner h2 em { font-weight: 400; }
+  .quote { margin: 0; min-width: 0; }
+  .quote blockquote { margin: 0; font-family: var(--font-serif); font-size: 1.8125rem; font-weight: 500; line-height: 1.4; text-wrap: pretty; }
+  .quote figcaption { margin-top: 1.375rem; font-size: .875rem; font-weight: 500; line-height: 1.5; color: var(--color-burgundy); }
+  .quote a { text-decoration: underline; text-underline-offset: 5px; text-decoration-thickness: 1px; }
+  .quote a:hover { text-decoration-thickness: 2px; }
+  .quote a:focus-visible { outline: 3px solid var(--color-rose-dark); outline-offset: 6px; }
+  .feature { padding: 3.5rem 7%; border-radius: 12px; background: #243551; color: var(--color-cream); margin-bottom: 2.25rem; }
+  .feature blockquote { font-size: clamp(2rem, 4vw, 3.375rem); line-height: 1.3; max-width: 53rem; }
+  .feature figcaption { color: #f1d9c6; }
+  .praise-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .praise-grid .quote { background: var(--color-cream-dark); padding: 2rem; border-radius: 12px; }
+  .praise-grid .closing { grid-column: 1 / -1; padding-block: 2.5rem; text-align: center; }
+  .closing blockquote { font-size: clamp(2.75rem, 5vw, 4rem); color: var(--color-burgundy); }
+  @media (max-width: 700px) {
+    .praise-section { padding-block: 3rem; }
+    .praise-inner h2 { margin-bottom: 2rem; }
+    .feature { padding: 2rem 1.5rem; }
+    .praise-grid { grid-template-columns: 1fr; gap: 1rem; }
+    .praise-grid .quote { padding: 1.75rem 1.5rem; }
+  }
+</style>
