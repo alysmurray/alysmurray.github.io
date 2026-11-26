@@ -3,8 +3,8 @@ import Layout from '../layouts/Layout.astro';
 const base = import.meta.env.BASE_URL;
 const siteUrl = import.meta.env.SITE || 'https://alysmurray.com';
 const bookUrl = new URL(`${base}the-girlfriend-exxxperience/`, siteUrl).href;
-// Source: publisher Book Description opening hook, copied verbatim; attribution emitted in head below.
-const description = "A ghostwriter for an adult-only content site finds herself falling for the one person she can't have—a subscriber—in this irresistibly spicy rom-com from the author of A Little Buzzed.";
+// Source: publisher Book Description opening hook shortened at the user’s request by removing the closing author credit; attribution emitted in head below.
+const description = "A ghostwriter for an adult-only content site finds herself falling for the one person she can't have—a subscriber—in this irresistibly spicy rom-com.";
 // Source: retailer links in the publisher's rendered preorder selector, accessed 2026-11-26.
 // Barnes & Noble resolved to its canonical product URL; optional publisher tracking parameters removed.
 const retailers = [
@@ -38,7 +38,7 @@ const bookSchema = {
   </Fragment>
 
   <section class="book-hero">
-    <!-- Source: title, author, availability date and description from https://www.penguinrandomhouse.com/books/769297/the-girlfriend-exxxperience-by-alys-murray/; opening hook copied verbatim. "Pre-order" is the user-requested control label. -->
+    <!-- Source: title, author, availability date and description from https://www.penguinrandomhouse.com/books/769297/the-girlfriend-exxxperience-by-alys-murray/; opening hook shortened at the user’s request by removing the closing author credit and adding a final period. "Pre-order" is the user-requested control label. -->
     <div class="hero-inner">
       <div class="cover-wrap">
         <!-- Source: official cover https://images.penguinrandomhouse.com/cover/700jpg/9780593819739; alt text uses publisher image label. -->
