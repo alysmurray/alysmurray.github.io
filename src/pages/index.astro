@@ -63,6 +63,16 @@ const base = import.meta.env.BASE_URL;
     </div>
   </section>
 
+  <section class="py-16 bg-cream-dark" aria-labelledby="featured-book">
+    <!-- Source: all text in this book feature reused verbatim from src/pages/a-little-buzzed.astro at commit 8abfb3a; https://alysmurray.com/a-little-buzzed/. -->
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="text-burgundy font-medium mb-4">Available Now</p>
+      <h2 id="featured-book" class="font-serif text-3xl mb-6"><a href={`${base}a-little-buzzed/`} class="hover:text-burgundy">A Little Buzzed</a></h2>
+      <p class="text-charcoal-light leading-relaxed mb-6">A sex toy engineer with one big secret finally meets her match, and together they'll put their own products to the test in this steamy romantic comedy.</p>
+      <a href={`${base}a-little-buzzed/`} class="inline-flex px-8 py-4 bg-burgundy text-cream rounded-full hover:bg-burgundy-dark transition-colors">Get Your Copy</a>
+    </div>
+  </section>
+
   <!-- Featured Work Section -->
   <section id="featured" class="py-24 bg-cream">
     <div class="max-w-6xl mx-auto px-6">
