@@ -1,0 +1,145 @@
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+const siteUrl = import.meta.env.SITE || 'https://alysmurray.com';
+const bookUrl = new URL(`${base}the-girlfriend-exxxperience/`, siteUrl).href;
+// Source: publisher Book Description opening hook, copied verbatim; attribution emitted in head below.
+const description = "A ghostwriter for an adult-only content site finds herself falling for the one person she can't have—a subscriber—in this irresistibly spicy rom-com from the author of A Little Buzzed.";
+// Source: retailer links in the publisher's rendered preorder selector, accessed 2026-11-26.
+// Barnes & Noble resolved to its canonical product URL; optional publisher tracking parameters removed.
+const retailers = [
+  { name: 'Amazon', href: 'https://www.amazon.com/gp/product/059381973X' },
+  { name: 'Barnes & Noble', href: 'https://www.barnesandnoble.com/w/the-girlfriend-exxxperience-alys-murray/1150783725?ean=9780593819739' },
+  { name: "Powell's", href: 'https://www.powells.com/book/-9780593819739' },
+  { name: 'Bookshop.org', href: 'https://bookshop.org/a/2186/9780593819739' },
+];
+const bookSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Book',
+  '@id': `${bookUrl}#book`,
+  name: 'The Girlfriend Exxxperience',
+  url: bookUrl,
+  author: { '@id': new URL(`${base}#person`, siteUrl).href },
+  image: new URL(`${base}images/books/full/the-girlfriend-exxxperience.jpg`, siteUrl).href,
+  description,
+  isbn: '9780593819739',
+  bookFormat: 'https://schema.org/Paperback',
+  datePublished: '2027-04-13',
+  numberOfPages: 384,
+  publisher: { '@type': 'Organization', name: 'Berkley' },
+  genre: 'Contemporary Romance',
+};
+---
+
+<Layout title="The Girlfriend Exxxperience by Alys Murray" description={description} image="images/books/full/the-girlfriend-exxxperience.jpg" imageWidth={454} imageHeight={700}>
+  <Fragment slot="head">
+    <Fragment set:html={"<!-- Source: title, metadata description and Book structured-data facts from https://www.penguinrandomhouse.com/books/769297/the-girlfriend-exxxperience-by-alys-murray/ Book Description and Product Details; accessed 2026-11-26. Publication date formatted as ISO 8601 and format mapped to schema.org/Paperback. Cover from https://images.penguinrandomhouse.com/cover/700jpg/9780593819739. -->"} />
+    <script type="application/ld+json" set:html={JSON.stringify(bookSchema).replace(/</g, '\\u003c')} />
+  </Fragment>
+
+  <section class="book-hero">
+    <!-- Source: title, author, availability date and description from https://www.penguinrandomhouse.com/books/769297/the-girlfriend-exxxperience-by-alys-murray/; opening hook copied verbatim. "Pre-order" is the user-requested control label. -->
+    <div class="hero-inner">
+      <div class="cover-wrap">
+        <!-- Source: official cover https://images.penguinrandomhouse.com/cover/700jpg/9780593819739; alt text uses publisher image label. -->
+        <img src={`${base}images/books/full/the-girlfriend-exxxperience.jpg`} alt="The Girlfriend Exxxperience by Alys Murray" width="454" height="700" fetchpriority="high" decoding="async" />
+      </div>
+      <div class="hero-copy">
+        <h1>The Girlfriend Exxxperience</h1>
+        <p class="byline">by <a href={`${base}about/`}>Alys Murray</a></p>
+        <p class="hook">{description}</p>
+        <p class="release">Available on <time datetime="2027-04-13">Apr 13, 2027</time></p>
+        <a class="preorder-button" href="#preorder">Pre-order</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="preorder" class="retailers-section" aria-labelledby="retailers-heading">
+    <!-- Source: "Preorder from:" heading, retailer names and outbound destinations from https://www.penguinrandomhouse.com/books/769297/the-girlfriend-exxxperience-by-alys-murray/ rendered retailer selector, accessed 2026-11-26. Barnes & Noble URL resolved to its product page. Bookshop.org retains the publisher-provided affiliate path. Retailers requested by user; no new promotional copy. -->
+    <div class="retailers-inner">
+      <h2 id="retailers-heading">Preorder from:</h2>
+      <div class="retailer-links">
+        {retailers.map((retailer) => (
+          <a href={retailer.href} target="_blank" rel="noopener noreferrer">{retailer.name}</a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="synopsis-section" aria-labelledby="synopsis">
+    <!-- Source: "Book Description" heading and all following paragraphs copied verbatim from https://www.penguinrandomhouse.com/books/769297/the-girlfriend-exxxperience-by-alys-murray/ (HTML entities decoded; accessed 2026-11-26). -->
+    <div class="reading-width">
+      <h2 id="synopsis">Book Description</h2>
+      <!-- Source: https://www.penguinrandomhouse.com/books/769297/the-girlfriend-exxxperience-by-alys-murray/ Book Description, synopsis paragraph 1; verbatim. -->
+      <p>Brooke Owens is the most popular plus-size creator on WithBenefits, a patronage site for adult-only content, thanks in part to the Girlfriend Experience—her exclusive service where subscribers receive texts, calls, birthday messages, love letters…all from her, as if she was their girlfriend. What people don’t know, though, is that when they sign up for the Girlfriend Experience, they’re not really talking to Brooke at all.</p>
+      <!-- Source: https://www.penguinrandomhouse.com/books/769297/the-girlfriend-exxxperience-by-alys-murray/ Book Description, synopsis paragraph 2; verbatim. -->
+      <p>Meet Rosie Sinclair. Brooke’s best friend and ghostwriter, she’s the secret to Brooke’s success. She can get a guy off, talk him through a bad day at work, and lock in his next month's subscription fee—all in just a few messages. The only problem is she’s fallen in love with one of their clients.</p>
+      <!-- Source: https://www.penguinrandomhouse.com/books/769297/the-girlfriend-exxxperience-by-alys-murray/ Book Description, synopsis paragraph 3; verbatim. -->
+      <p>Pediatric cardiac surgeon Ward Fowler has been Brooke’s number one subscriber for almost a year now, and he can’t help but face the reality that he may have fallen for the woman he’s paying to text him every day. Brooke arranges for Rosie and Ward to meet IRL, but Ward doesn’t realize that Rosie’s the one he’s been messaging 24/7—and Rosie can’t risk leaving the anonymity of her WithBenefits persona to tell him the truth. When Rosie’s identity is finally exposed, she’ll have to prove that she’s ready to step out of Brooke’s shadow and take the Girlfriend Experience offline and into real life.</p>
+    </div>
+  </section>
+
+  <section class="details-section" aria-labelledby="details">
+    <!-- Source: labels and facts from https://www.penguinrandomhouse.com/books/769297/the-girlfriend-exxxperience-by-alys-murray/ Product Details and format selector (US paperback, accessed 2026-11-26). "Formats" reused from existing book page. -->
+    <div class="reading-width">
+      <h2 id="details">Product Details</h2>
+      <dl>
+        <div><dt>Author</dt><dd><a href={`${base}about/`}>Alys Murray</a></dd></div>
+        <div><dt>Published by</dt><dd>Berkley</dd></div>
+        <div><dt>Available on</dt><dd><time datetime="2027-04-13">Apr 13, 2027</time></dd></div>
+        <div><dt>ISBN</dt><dd>9780593819739 (Paperback)</dd></div>
+        <div><dt>Pages</dt><dd>384</dd></div>
+        <div><dt>Formats</dt><dd>Paperback, Ebook, Audiobook Download</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="preorder-section" aria-label="Pre-order">
+    <!-- Source: "Pre-order" label requested by user; title from publisher; button links to the retailer selection requested by user. -->
+    <h2>The Girlfriend Exxxperience</h2>
+    <a class="preorder-button" href="#preorder">Pre-order</a>
+  </section>
+</Layout>
+
+<style>
+  .book-hero { background: #243551; color: var(--color-cream); padding: 6rem 1.5rem; }
+  .hero-inner { max-width: 72rem; margin-inline: auto; display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem; align-items: center; }
+  .cover-wrap { display: flex; justify-content: center; }
+  .cover-wrap img { width: 22rem; max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 20px 40px #101b2c55; }
+  h1 { color: inherit; font-size: clamp(2.75rem, 4.5vw, 4.25rem); line-height: 1.15; text-wrap: balance; margin: 0 0 1rem; }
+  .byline { font-family: var(--font-serif); font-size: 2rem; margin-bottom: 2rem; }
+  .byline a { text-decoration: underline; text-decoration-color: #fdf8f377; text-underline-offset: 6px; }
+  .hook { font-size: 1.125rem; line-height: 1.7; margin-bottom: 1.5rem; }
+  .release { margin-bottom: 1.5rem; }
+  .preorder-button { display: inline-flex; align-items: center; justify-content: center; padding: .875rem 2.25rem; border-radius: 999px; background: var(--color-cream); color: #243551; font-weight: 500; min-height: 48px; transition: background .2s, transform .2s; }
+  .preorder-button:hover { background: var(--color-cream-dark); transform: translateY(-2px); }
+  .preorder-button:active { transform: translateY(0); }
+  a:focus-visible { outline: 3px solid var(--color-rose-dark); outline-offset: 5px; }
+  .retailers-section { padding: 4rem 1.5rem; background: var(--color-cream-dark); scroll-margin-top: 5rem; }
+  .retailers-inner { max-width: 64rem; margin-inline: auto; }
+  .retailers-section h2 { text-align: center; margin-bottom: 2rem; }
+  .retailer-links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+  .retailer-links a { display: flex; align-items: center; justify-content: center; text-align: center; min-height: 4.5rem; padding: 1rem; background: var(--color-cream); color: var(--color-burgundy); border-radius: 12px; font-weight: 500; transition: background .2s; }
+  .retailer-links a:hover { background: var(--color-burgundy); color: var(--color-cream); }
+  @media(max-width:767px) { .retailer-links { grid-template-columns: repeat(2, 1fr); } }
+  .reading-width { max-width: 48rem; margin-inline: auto; }
+  .synopsis-section,.details-section { padding: 5rem 1.5rem; }
+  .synopsis-section h2,.details-section h2 { margin-bottom: 2rem; }
+  .synopsis-section p { max-width: none; line-height: 1.8; margin-bottom: 1.5rem; color: var(--color-charcoal-light); }
+  .synopsis-section p:last-child { margin-bottom: 0; }
+  .details-section { background: var(--color-cream-dark); }
+  dl { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem 2rem; }
+  dt { font-weight: 500; } dd { margin: 0; } dd a { text-decoration: underline; text-underline-offset: 4px; color: var(--color-burgundy); }
+  .preorder-section { background: #243551; color: var(--color-cream); text-align: center; padding: 4rem 1.5rem; }
+  .preorder-section h2 { color: inherit; margin-bottom: 2rem; }
+  @media(max-width:767px) {
+    .book-hero { padding-block: 3rem; }
+    .hero-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .hero-copy { grid-row: 1; text-align: center; }
+    .hook { margin-inline: auto; }
+    .cover-wrap img { width: 18rem; }
+    .synopsis-section,.details-section { padding-block: 3.5rem; }
+    dl { grid-template-columns: 1fr; }
+  }
+  @media(prefers-reduced-motion:reduce) { .preorder-button { transition: none; transform: none; } }
+</style>

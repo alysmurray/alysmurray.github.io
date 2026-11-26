@@ -9,8 +9,6 @@ const books = [
   {
     title: "A Little Buzzed",
     slug: "a-little-buzzed",
-    status: "New Release",
-    featured: true,
     cover: `${base}images/books/thumbs/a-little-buzzed.jpg`,
   },
   {
@@ -108,29 +106,30 @@ const books = [
     </div>
   </section>
 
-  <!-- Featured / New Release -->
+  <!-- Featured preorder -->
   <section class="py-16 bg-burgundy text-cream">
+    <!-- Source: title, cover, date and synopsis hook from https://www.penguinrandomhouse.com/books/769297/the-girlfriend-exxxperience-by-alys-murray/; hook copied verbatim from the new book page. "Pre-order" label requested by user. -->
     <div class="max-w-6xl mx-auto px-6">
       <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-        <div class="w-56 md:w-64 h-84 md:h-96 rounded-lg overflow-hidden shadow-xl flex-shrink-0">
+        <div class="w-56 md:w-64 rounded-lg overflow-hidden shadow-xl flex-shrink-0">
           <img
-            src={`${base}images/books/thumbs/a-little-buzzed.jpg`}
-            alt="A Little Buzzed book cover"
-            class="w-full h-full object-cover"
+            src={`${base}images/books/full/the-girlfriend-exxxperience.jpg`}
+            alt="The Girlfriend Exxxperience by Alys Murray"
+            width="454" height="700"
+            class="w-full h-auto"
           />
         </div>
         <div class="text-center md:text-left">
-          <span class="text-cream/80 text-sm uppercase tracking-wider">New Release</span>
-    <!-- Source: existing heading text retained; linked to the official book page. -->
-          <h2 class="font-serif text-3xl md:text-4xl mt-2 text-cream"><a href={`${base}a-little-buzzed/`} class="underline decoration-cream/40 underline-offset-4 hover:decoration-cream">A Little Buzzed</a></h2>
+          <h2 class="font-serif text-3xl md:text-4xl mt-2 text-cream"><a href={`${base}the-girlfriend-exxxperience/`} class="underline decoration-cream/40 underline-offset-4 hover:decoration-cream">The Girlfriend Exxxperience</a></h2>
           <p class="text-cream/90 mt-4 max-w-xl leading-relaxed">
-            The newest steamy romantic comedy from Alys Murray. Get your copy of this fun and spicy story today.
+            A ghostwriter for an adult-only content site finds herself falling for the one person she can't have—a subscriber—in this irresistibly spicy rom-com from the author of A Little Buzzed.
           </p>
+          <p class="text-cream/90 mt-4">Available on <time datetime="2027-04-13">Apr 13, 2027</time></p>
           <a
-            href={`${base}a-little-buzzed/`}
+            href={`${base}the-girlfriend-exxxperience/`}
             class="inline-block mt-6 px-8 py-3 bg-cream text-burgundy rounded-full font-medium hover:bg-cream-dark transition-colors"
           >
-            Buy Now
+            Pre-order
           </a>
         </div>
       </div>
@@ -146,13 +145,20 @@ const books = [
       />
 
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-8 mt-16">
-        {books.filter(b => !b.featured).map((book) => (
-          <BookCard
-            title={book.title}
-            genre={book.genre}
-            bestseller={book.bestseller}
-            coverImage={book.cover}
-          />
+        <!-- Source: A Little Buzzed title and cover retained from this page's previous feature; moved into the catalog and linked to its official book page at the user's request. Other catalog copy unchanged. -->
+        {books.map((book) => (
+          book.slug === 'a-little-buzzed' ? (
+            <a href={`${base}a-little-buzzed/`} class="block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-burgundy">
+              <BookCard title={book.title} coverImage={book.cover} />
+            </a>
+          ) : (
+            <BookCard
+              title={book.title}
+              genre={book.genre}
+              bestseller={book.bestseller}
+              coverImage={book.cover}
+            />
+          )
         ))}
       </div>
     </div>
